@@ -1,0 +1,7 @@
+keybinding:
+  universal:
+    quit-alt1: '<esc>' # alternative/alias of quit
+gui:
+  theme:
+    selectedLineBgColor:
+      - black

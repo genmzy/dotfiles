@@ -1,0 +1,16 @@
+/*
+!.zshrc
+!.config
+.config/*
+!.config/fzf
+!.config/p10k
+!.config/ranger
+!.config/neofetch
+!.config/scripts
+!.config/lazygit/
+.config/lazygit/state.yml
+!install.sh
+!.gitignore
+!.gitconfig
+!.pip
+!Backup

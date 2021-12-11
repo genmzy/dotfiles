@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# need root privilege
+
+echo `date` >> /var/log/docker_start.log
+
+# docker start
+/usr/sbin/service docker $1
+if [ $? -ne 0 ]; then
+    echo "start docker failed ... " >> /var/log/docker_start.log
+    exit 1
+fi
+
+if [ "X$1" != "Xrestart" ]; then
+    exit 0
+fi
+
+# check sub interface exist or not
+eth0_1=`ifconfig | grep 'eth0:1:' | wc -l`
+if [ "X$eth0_1" != "X0" ] # exist already
+then
+    exit 0
+fi
+
+# add an sub-interface eth0:1
+/mnt/c/Windows/system32/wsl.exe -d Ubuntu-20.04 -u root ip addr add 192.168.50.16/24 broadcast 192.168.50.255 dev eth0 label eth0:1 2>&1 >> /var/log/docker_start.log
+
+exit 0
