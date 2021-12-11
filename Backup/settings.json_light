@@ -56,11 +56,9 @@
   "profiles": {
     "defaults": {
       "acrylicOpacity": 0.9,
-      // "antialiasingMode": "grayscale",
       "antialiasingMode": "cleartype",
       "backgroundImageOpacity": 0.05,
       "bellStyle": "none",
-      // "colorScheme": "deus_trans",
       "colorScheme": "space_light",
       "intenseTextStyle": "bold", // NOTE: DO NOT delete this anyway
       "backgroundImage": "C:/Users/waves/Pictures/pokemon/Generation IV - Sinnoh/448.jpg",
@@ -77,7 +75,6 @@
         "weight": "normal"
       },
       "padding": "0, 0, 0, 0",
-      // "tabColor": "#458588",
       "tabColor": "#6981C5",
       "useAcrylic": false
     },
