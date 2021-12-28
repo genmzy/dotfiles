@@ -131,11 +131,11 @@ export windesk=/mnt/c/Users/waves/Desktop/
 export windownload=/mnt/c/Users/waves/Downloads/
 export winfonts=/mnt/d/font/
 
-PATH="/home/waves/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/waves/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/waves/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/waves/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/waves/perl5"; export PERL_MM_OPT;
+PATH="/home/waves/Workspace/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/waves/Workspace/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/waves/Workspace/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/waves/Workspace/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/waves/Workspace/perl5"; export PERL_MM_OPT;
 
 alias luamake=/home/waves/Workspace/lua/ls/lua-language-server/3rd/luamake/luamake
 
