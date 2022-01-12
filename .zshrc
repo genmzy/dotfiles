@@ -143,3 +143,5 @@ export ERLANG_HOME=/opt/environment/erlang
 export PATH=$PATH:${ERLANG_HOME}/bin
 export PATH=$PATH:/usr/local/rabbitmq_server/sbin
 export RABBITMQ_HOME=/usr/local/rabbitmq_server
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

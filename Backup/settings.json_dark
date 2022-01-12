@@ -63,7 +63,7 @@
       "intenseTextStyle": "bold", // NOTE: DO NOT delete this anyway
       "backgroundImage": "C:/Users/waves/Pictures/pokemon/Generation IV - Sinnoh/448.jpg",
       "font": {
-        "face": "RecMonoGenmzyCasualExtraThin NF",
+        "face": "RecMonoGenmzyUnsimple NF",
         "size": 13,
         "features": {
           "ital": 1,
