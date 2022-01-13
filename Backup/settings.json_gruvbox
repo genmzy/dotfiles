@@ -56,10 +56,10 @@
   "profiles": {
     "defaults": {
       "acrylicOpacity": 0.9,
-      "antialiasingMode": "cleartype",
-      "backgroundImageOpacity": 0.05,
+      "antialiasingMode": "grayscale",
+      "backgroundImageOpacity": 0.04,
       "bellStyle": "none",
-      "colorScheme": "space_light",
+      "colorScheme": "gruvbox_hard",
       "intenseTextStyle": "bold", // NOTE: DO NOT delete this anyway
       "backgroundImage": "C:/Users/waves/Pictures/pokemon/Generation IV - Sinnoh/448.jpg",
       "font": {
@@ -75,7 +75,7 @@
         "weight": "normal"
       },
       "padding": "0, 0, 0, 0",
-      "tabColor": "#6981C5",
+      "tabColor": "#1d2021",
       "useAcrylic": false
     },
     "list": [
@@ -643,7 +643,7 @@
     },
     {
       "name": "gruvbox_hard",
-      "background": "#1d2021",
+      "background": "#181B1C",
       "black": "#1d2021",
       "blue": "#83a598",
       "brightBlack": "#665c54",
@@ -665,5 +665,5 @@
       "selectionBackground": "#3c3836"
     }
   ],
-  "theme": "light"
+  "theme": "dark"
 }
