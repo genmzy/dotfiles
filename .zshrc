@@ -41,6 +41,7 @@ alias leetcode="NODE_NO_WARNINGS=1 leetcode"
 alias dark="cp ~/Backup/settings.json_dark /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
 alias light="cp ~/Backup/settings.json_light /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout light_mode && cd -"
 alias gruvbox="cp ~/Backup/settings.json_gruvbox /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
+alias everforest="cp ~/Backup/settings.json_everforest /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout forest_night && cd -"
 
 ## For gnome settings
 # alias caps_to_esc="/usr/bin/xmodmap -e 'clear lock' && /usr/bin/xmodmap -e 'keysym Caps_Lock = Escape'"
