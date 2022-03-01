@@ -56,7 +56,7 @@
   "profiles": {
     "defaults": {
       "acrylicOpacity": 0.9,
-      "antialiasingMode": "grayscale",
+      "antialiasingMode": "cleartype",
       "backgroundImageOpacity": 0.04,
       "bellStyle": "none",
       "colorScheme": "forest_light",
