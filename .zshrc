@@ -43,11 +43,11 @@ alias leetcode="NODE_NO_WARNINGS=1 leetcode"
 # alias for themes and font types
 alias theme_deus="cp ~/Backup/settings.json_dark /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
 alias theme_space_light="cp ~/Backup/settings.json_light /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout light_mode && cd -"
-alias theme_gruvbox="cp ~/Backup/settings.json_gruvbox /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
+alias theme_gruvbox="cp ~/Backup/settings.json_gruvbox /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout gruvbox && cd -"
 alias theme_everforest="cp ~/Backup/settings.json_everforest /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout forest_night && cd -"
 alias theme_sonokai="cp ~/Backup/settings.json_sonokai /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout sonokai && cd -"
 alias theme_everforest_light="cp ~/Backup/settings.json_everlight /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout everforest_light && cd -"
-alias theme_aquarium="cp ~/Backup/settings.json_aquarium /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout aquarium && cd -"
+alias theme_aquarium="cp ~/Backup/settings.json_aquarium /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
 # fonts change alias
 alias font_lig_src_pro="sed -i 's/\"face\":.*/\"face\": \"LigaSrcPro NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias font_recursive_unsimple="sed -i 's/\"face\":.*/\"face\": \"RecMonoGenmzyUnsimple NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
