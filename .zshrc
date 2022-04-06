@@ -53,6 +53,7 @@ alias font_lig_src_pro="sed -i 's/\"face\":.*/\"face\": \"LigaSrcPro NF\",/g' /m
 alias font_recursive_unsimple="sed -i 's/\"face\":.*/\"face\": \"RecMonoGenmzyUnsimple NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias font_consolig="sed -i 's/\"face\":.*/\"face\": \"Consolig NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias font_consolas="sed -i 's/\"face\":.*/\"face\": \"Consolas NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+alias font_courier_code="sed -i 's/\"face\":.*/\"face\": \"CourierPrimeSans NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 
 ## For gnome settings
 # alias caps_to_esc="/usr/bin/xmodmap -e 'clear lock' && /usr/bin/xmodmap -e 'keysym Caps_Lock = Escape'"
