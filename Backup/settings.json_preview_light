@@ -75,7 +75,7 @@
       "opacity": 90,
       "padding": "0, 0, 0, 0",
       "scrollbarState": "visible",
-      "tabColor": "#F59BB5",
+      "tabColor": "#FFBEB5",
       "useAcrylic": false
     },
     "list": [
@@ -88,7 +88,7 @@
         "icon": "C:\\Users\\waves\\Pictures\\Camera Roll\\icons\\icons8-console-24.png",
         "intenseTextStyle": "bold",
         "name": "Ubuntu-20.04",
-        "opacity": 90,
+        "opacity": 80,
         "source": "Windows.Terminal.Wsl",
         "startingDirectory": "//wsl$/Ubuntu-20.04/home/waves",
         "useAcrylic": false
