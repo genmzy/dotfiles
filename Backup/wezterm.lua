@@ -119,4 +119,10 @@ return {
 		active_titlebar_bg = "#333333",
 		inactive_titlebar_bg = "#333333",
 	},
+	window_padding = {
+		left = 0,
+		right = 0,
+		top = 0,
+		bottom = 0,
+	}
 }
