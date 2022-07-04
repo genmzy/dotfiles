@@ -109,7 +109,8 @@ return {
 		ansi = { "#32302F", "#CC241D", "#B8BB26", "#D79921", "#83A598", "#B16286", "#689D6A", "#928374" },
 		brights = { "#665C54", "#FB4934", "#B8BB26", "#FABD2F", "#83A598", "#D3869B", "#8EC07C", "#F2E5BC" },
 		background = "#1E1E1E",
-		foreground = "#F2E5BC"
+		foreground = "#F2E5BC",
+		scrollbar_thumb = "#57454A"
 	},
 	font_size = 9.0,
 	-- use_fancy_tab_bar = true,
@@ -124,5 +125,6 @@ return {
 		right = 0,
 		top = 0,
 		bottom = 0,
-	}
+	},
+	enable_scroll_bar = true
 }
