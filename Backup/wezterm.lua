@@ -55,7 +55,7 @@ local mouse_bindings = {
 
 }
 
-
+--[[
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	local title_with_icon
 	local title = " " .. wezterm.truncate_right(title_with_icon, max_width - 6) .. " "
@@ -66,6 +66,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 		{ Attribute = { Intensity = "Normal" } },
 	}
 end)
+]]
 
 wezterm.on(
 	"update-right-status",
@@ -90,7 +91,11 @@ return {
 	mouse_bindings = mouse_bindings,
 	disable_default_key_bindings = false,
 	default_prog = { "wsl.exe", "--cd", "~" },
-	font = wezterm.font("RecMonoGenmzyUnsimple NF"),
+	-- font = wezterm.font("Ligamononoki NF"),
+	-- font = wezterm.font("JetBrainsMono NF"),
+	-- font = wezterm.font("RecMonoGenmzyUnsimple NF"),
+	-- font = wezterm.font("RecMonoLinear NF"),
+	font = wezterm.font("RecMonoDuotone NF"),
 	text_background_opacity = 1.0,
 	-- color_scheme = "Gruvbox Dark",
 	colors = {
@@ -116,7 +121,7 @@ return {
 	-- use_fancy_tab_bar = true,
 	window_frame = {
 		font = wezterm.font({ family="JetBrainsMono NF" }),
-		font_size = 8.5,
+		font_size = 8,
 		active_titlebar_bg = "#333333",
 		inactive_titlebar_bg = "#333333",
 	},
