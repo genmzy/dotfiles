@@ -117,11 +117,11 @@ return {
 		foreground = "#F2E5BC",
 		scrollbar_thumb = "#57454A"
 	},
-	font_size = 9.0,
+	font_size = 10.5,
 	-- use_fancy_tab_bar = true,
 	window_frame = {
 		font = wezterm.font({ family="JetBrainsMono NF" }),
-		font_size = 8,
+		font_size = 9,
 		active_titlebar_bg = "#333333",
 		inactive_titlebar_bg = "#333333",
 	},
