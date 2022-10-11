@@ -8,7 +8,8 @@ api.map("<Tab>", "D");
 api.map("<Space>b", ">_b");
 
 settings.blocklistPattern =
-  /.*godbolt.org.*|.*leetcode-cn.com.*|.*pbccrc.org.cn.*|.*t-jump.yundasys.com.*/i;
+  /.*godbolt.org.*|.*leetcode-cn.com.*|.*pbccrc.org.cn.*|.*t-jump.yundasys.com.*|.*excalidraw.com.*/i;
+
 
 // ---- Hints ----
 // Hints have to be defined separately
