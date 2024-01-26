@@ -4,4 +4,4 @@ keybinding:
 gui:
   theme:
     selectedLineBgColor:
-      - black
+      - reverse

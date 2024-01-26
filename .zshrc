@@ -20,9 +20,9 @@ alias remove="sudo apt-get remove"
 alias install="sudo apt-fast install"
 alias update="sudo apt-fast update"
 alias upgrade="sudo apt-fast upgrade"
-alias mysqlp="mysql -uroot -p123456"
+alias mysqlp="mysql -uroot -p123456 --host=127.0.0.1"
 alias ne="neofetch"
-alias sfs="sudo freeswitch -nc -nonat"
+alias sfs="https_proxy=\"\" ALL_PROXY=\"\" sudo freeswitch -nc -nonat"
 alias sfs_testing="sudo freeswitch -nc -nonat -conf /usr/local/freeswitch/conf.testing -log /usr/local/freeswitch/log -db /usr/local/freeswitch/db"
 alias svim="sudo vim"
 alias sra="sudo ranger"
@@ -31,29 +31,15 @@ alias l='ls -CF'
 alias mvSwap="~/.config/scripts/mvSwap.sh"
 alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
-alias ssh221="ssh root@192.168.100.221 -p5022"
-alias edit_wt="vi /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-alias edit_wt_preview="vi /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json"
-alias mysql_4902x="mysql -upre -pODcgSwkfGtWUAuX9EKRh --host=10.172.58.25 --port=3401"
-alias mysql_opensips="mysql -uggs -pQ6xn537jfwJDVUGNTLq4 --host=10.172.58.25 --port=3405"
 alias gogo="cd ~/Workspace/golang/src/"
 alias restartDocker="sudo ~/.config/scripts/auto_docker restart"
 alias leetcode="NODE_NO_WARNINGS=1 leetcode"
+alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
 
-# alias for themes and font types
-alias theme_deus="cp ~/Backup/settings.json_dark /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
-alias theme_space_light="cp ~/Backup/settings.json_light /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout light_mode && cd -"
-alias theme_gruvbox="cp ~/Backup/settings.json_gruvbox /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout gruvbox && cd -"
-alias theme_everforest="cp ~/Backup/settings.json_everforest /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout forest_night && cd -"
-alias theme_sonokai="cp ~/Backup/settings.json_sonokai /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout sonokai && cd -"
-alias theme_everforest_light="cp ~/Backup/settings.json_everlight /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout everforest_light && cd -"
-alias theme_aquarium="cp ~/Backup/settings.json_aquarium /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json && cd ~/.config/nvim/ && git checkout master && cd -"
-# fonts change alias
-alias font_lig_src_pro="sed -i 's/\"face\":.*/\"face\": \"LigaSrcPro NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-alias font_recursive_unsimple="sed -i 's/\"face\":.*/\"face\": \"RecMonoGenmzyUnsimple NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-alias font_consolig="sed -i 's/\"face\":.*/\"face\": \"Consolig NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-alias font_consolas="sed -i 's/\"face\":.*/\"face\": \"Consolas NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-alias font_courier_code="sed -i 's/\"face\":.*/\"face\": \"CourierPrimeSans NF\",/g' /mnt/c/Users/waves/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+alias fs_memcheck="sudo valgrind --tool=memcheck --error-limit=no --log-file=vg.log --leak-check=full --leak-resolution=high --show-reachable=yes /usr/local/freeswitch/bin/freeswitch -vg -ncwait -nonat"
+alias fsconf="cd /usr/local/freeswitch/conf"
+alias fslog="cd /usr/local/freeswitch/log"
+
 
 ## For gnome settings
 # alias caps_to_esc="/usr/bin/xmodmap -e 'clear lock' && /usr/bin/xmodmap -e 'keysym Caps_Lock = Escape'"
@@ -108,14 +94,10 @@ zplug load
 # NOTE: use cc to clear screen. I use tmux ctrl+hjkl switch panel, but ctrl+l conflict with clear-screen
 # bindkey "cc" clear-screen
 
-#export JAVA_HOME=/opt/environment/java/jdk-13.0.2
-#export JRE_HOME=/${JAVA_HOME}
-#export CLASSPATH=.:${JAVA_HOME}/libss:${JRE_HOME}/lib
-#export PATH=${JAVA_HOME}/bin:$PATH
-##export CATALINA_HOME=/usr/local/apache-tomcat9
-export JAVA_HOME=/opt/environment/java/jdk1.8
-export CLASSPATH=.:${JAVA_HOME}/jre/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
-export PATH=${JAVA_HOME}/bin:${PATH}
+export JAVA_HOME=/opt/environment/java/jdk-20.0.2
+export PATH=${JAVA_HOME}/bin:$PATH
+# export JRE_HOME=/${JAVA_HOME}
+# export CLASSPATH=.:${JAVA_HOME}/libss:${JRE_HOME}/lib
 
 #fzf
 export FZF_DEFAULT_OPTS='--bind ctrl-e:down,ctrl-u:up --tabstop=4 --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || hlight -O ansi -l {} || cat {}) 2> /dev/null | head -8000"'
@@ -139,11 +121,13 @@ export GOTRACEBACK=1
 #export BAT_THEME="Nord"
 export BAT_THEME="ansi-dark"
 
-export https_proxy="http://192.168.50.88:15083"
-export ALL_PROXY="socks5://192.168.50.88:15083"
-export winhome=/mnt/c/Users/waves/
-export windesk=/mnt/c/Users/waves/Desktop/
-export windownload=/mnt/c/Users/waves/Downloads/
+export PROXY_IP=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+export https_proxy="http://$PROXY_IP:15083"
+export ALL_PROXY="socks5://$PROXY_IP:15083"
+
+export winhome=/mnt/c/Users/jincy/
+export windesk=/mnt/c/Users/jincy/Desktop/
+export windownload=/mnt/c/Users/jincy/Downloads/
 export winfonts=/mnt/d/font/
 
 PATH="/home/waves/Workspace/perl5/bin${PATH:+:${PATH}}"; export PATH;
