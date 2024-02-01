@@ -25,6 +25,10 @@ alias ne="neofetch"
 alias sfs="https_proxy=\"\" ALL_PROXY=\"\" sudo freeswitch -nc -nonat"
 alias sfs_testing="sudo freeswitch -nc -nonat -conf /usr/local/freeswitch/conf.testing -log /usr/local/freeswitch/log -db /usr/local/freeswitch/db"
 alias svim="sudo vim"
+alias fs="fs_cli"
+alias fsconf="cd /usr/local/freeswitch/conf"
+alias fslog="cd /usr/local/freeswitch/log"
+alias sfs_testing="sudo freeswitch -nc -nonat -conf /usr/local/freeswitch/conf.testing -log /usr/local/freeswitch/log -db /usr/local/freeswitch/db"
 alias sra="sudo ranger"
 alias ra="ranger"
 alias l='ls -CF'
@@ -32,8 +36,6 @@ alias mvSwap="~/.config/scripts/mvSwap.sh"
 alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
 alias gogo="cd ~/Workspace/golang/src/"
-alias restartDocker="sudo ~/.config/scripts/auto_docker restart"
-alias leetcode="NODE_NO_WARNINGS=1 leetcode"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
 
 alias fs_memcheck="sudo valgrind --tool=memcheck --error-limit=no --log-file=vg.log --leak-check=full --leak-resolution=high --show-reachable=yes /usr/local/freeswitch/bin/freeswitch -vg -ncwait -nonat"
@@ -121,27 +123,26 @@ export GOTRACEBACK=1
 #export BAT_THEME="Nord"
 export BAT_THEME="ansi-dark"
 
-export PROXY_IP=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+if grep -qi microsoft /proc/version; then
+  # wsl
+  export PROXY_IP=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+  export winhome=/mnt/c/Users/waves/
+  export windesk=/mnt/c/Users/waves/Desktop/
+  export windownload=/mnt/c/Users/waves/Downloads/
+  export winfonts=/mnt/d/font/
+else
+  export XMODIFIERS="@im=ibus"
+  export QT_IM_MODULE="ibus"
+  export PROXY_IP=127.0.0.1
+fi
 export https_proxy="http://$PROXY_IP:15083"
 export ALL_PROXY="socks5://$PROXY_IP:15083"
-
-export winhome=/mnt/c/Users/jincy/
-export windesk=/mnt/c/Users/jincy/Desktop/
-export windownload=/mnt/c/Users/jincy/Downloads/
-export winfonts=/mnt/d/font/
 
 PATH="/home/waves/Workspace/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/waves/Workspace/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/waves/Workspace/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/waves/Workspace/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/waves/Workspace/perl5"; export PERL_MM_OPT;
-
-alias luamake=/home/waves/Workspace/lua/ls/lua-language-server/3rd/luamake/luamake
-
-export ERLANG_HOME=/opt/environment/erlang
-export PATH=$PATH:${ERLANG_HOME}/bin
-export PATH=$PATH:/usr/local/rabbitmq_server/sbin
-export RABBITMQ_HOME=/usr/local/rabbitmq_server
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
