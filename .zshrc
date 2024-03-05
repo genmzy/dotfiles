@@ -113,6 +113,7 @@ source ~/.config/fzf/completion.zsh
 # github
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
 
+export CGO_ENABLED="0"
 export GOROOT=/opt/environment/go
 export GOPATH=$HOME/Workspace/golang/
 export GOBIN=$GOPATH/bin
