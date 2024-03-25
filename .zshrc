@@ -139,12 +139,8 @@ fi
 export https_proxy="http://$PROXY_IP:15083"
 export ALL_PROXY="socks5://$PROXY_IP:15083"
 
-PATH="/home/waves/Workspace/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/waves/Workspace/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/waves/Workspace/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/waves/Workspace/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/waves/Workspace/perl5"; export PERL_MM_OPT;
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export EDITOR="nvim"
+export VISUAL "nvim"
 
 /usr/bin/tabs 4
