@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/waves/Downloads/ClashLinux/
+cd /home/waves/Downloads/clash-for-linux-master/
 
 clash_count=`ps axu|grep cfw| grep -v grep | wc -l`
 
@@ -7,6 +7,6 @@ if [ $clash_count -gt 0 ]
 then
 	/usr/bin/echo "Clash already started."
 else
-	/usr/bin/nohup ./cfw 2>&1 > cfw.log &
+	ALL_PROXY="" https_proxy="" http_proxy="" ./start.sh
 fi
 
