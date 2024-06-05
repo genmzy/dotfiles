@@ -1,7 +1,8 @@
 #!/bin/bash
-cd /home/waves/Downloads/clash-for-linux-master/
 
-clash_count=`ps axu|grep cfw| grep -v grep | wc -l`
+cd ~/Backup/clash-for-linux-master/
+
+clash_count=`ps axu|grep clash| grep -v grep | wc -l`
 
 if [ $clash_count -gt 0 ]
 then
