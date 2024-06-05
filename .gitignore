@@ -8,6 +8,7 @@
 !.config/neofetch
 !.config/scripts
 !.config/lazygit/
+!.config/nvim
 .config/lazygit/state.yml
 !install.sh
 !.gitignore

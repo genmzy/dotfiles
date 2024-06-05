@@ -1,3 +1,6 @@
 [submodule "Backup/clash-for-linux-master"]
 	path = Backup/clash-for-linux-master
 	url = https://github.com/genmzy/clash-for-linux-master.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/genmzy/nvim.git
