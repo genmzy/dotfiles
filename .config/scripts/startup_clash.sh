@@ -1,8 +1,8 @@
 #!/bin/bash
-
 cd ~/Backup/clash-for-linux-master/
 
-clash_count=`ps axu|grep clash| grep -v grep | wc -l`
+clash_count=`ps axu| grep clash | grep -v "startup_clash" | grep -v grep | wc -l`
+echo "clash count: "$clash_count
 
 if [ $clash_count -gt 0 ]
 then
