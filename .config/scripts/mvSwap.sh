@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 vim_ps_count=`ps aux | grep vim | grep -v 'grep' | wc -l`
-vim_swap_count=`ls /home/waves/.local/share/nvim/swap/ | wc -l`
+vim_swap_count=`ls /home/waves/.local/state/nvim/swap | wc -l`
 
 if [ $vim_ps_count -gt 0 ]
 then
