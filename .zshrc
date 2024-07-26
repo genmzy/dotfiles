@@ -96,6 +96,7 @@ zplug load
 
 # NOTE: use cc to clear screen. I use tmux ctrl+hjkl switch panel, but ctrl+l conflict with clear-screen
 # bindkey "cc" clear-screen
+bindkey '^o' autosuggest-accept
 
 export JAVA_HOME=/opt/environment/java/jdk-20.0.2
 export PATH=${JAVA_HOME}/bin:$PATH
