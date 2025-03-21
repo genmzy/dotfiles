@@ -10,6 +10,6 @@ if [ $clash_count -gt 0 ]
 then
 	/usr/bin/echo "Clash already started."
 else
-	ALL_PROXY="" all_proxy="" HTTPS_PROXY=""  https_proxy="" HTTP_PROXY="" http_proxy=""  ./start.sh
+	ALL_PROXY="" all_proxy="" HTTPS_PROXY=""  https_proxy="" HTTP_PROXY="" http_proxy=""  ./start.sh $1
 fi
 
