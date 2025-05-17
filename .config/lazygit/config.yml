@@ -2,6 +2,7 @@ keybinding:
   universal:
     quit-alt1: '<esc>' # alternative/alias of quit
 gui:
+  border: single
   theme:
     selectedLineBgColor:
       - reverse
