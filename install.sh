@@ -29,24 +29,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-/bin/mkdir /mnt/c/Users/waves/Pictures/pokemon/Generation\ IV\ -\ Sinnoh/ -p
-/bin/cp ./background/448.jpg /mnt/c/Users/waves/Pictures/pokemon/Generation\ IV\ -\ Sinnoh/448.jpg
-if [ $? -ne 0 ]; then
-    echo "cp picture file failed, exiting ... "
-    exit 1
-fi
-
-/bin/mkdir /mnt/c/Users/waves/.config/wezterm/ -p
-/bin/cp ./Backup/wezterm.lua /mnt/c/Users/waves/.config/wezterm/
-if [ $? -ne 0 ]; then
-    echo "cp picture file failed, exiting ... "
-    exit 1
-fi
 
 echo $1 | sudo -S apt-fast install lazygit bat ccat silversearcher-ag ripgrep lolcat htop ranger bear gcc make cmake curl tree neofetch git lua5.1 lua5.2 maven net-tools python3 pip
 
 ~/.config/scripts/pip_update.py
 pip install pynvim neovim neovim-remote
+
+cp ./.gitconfig ~/.gitconfig
 
 echo "Ok, now, you need to install:"
 echo "\tnode, npm, golang, freeswitch, opensips, java(maybe) manually"
