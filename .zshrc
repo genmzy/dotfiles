@@ -37,7 +37,6 @@ alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
 alias gogo="cd ~/Workspace/golang/src/"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
-alias clash="~/.config/scripts/startup_clash.sh"
 
 alias fs_memcheck="sudo valgrind --tool=memcheck --error-limit=no --log-file=vg.log --leak-check=full --leak-resolution=high --show-reachable=yes /usr/local/freeswitch/bin/freeswitch -vg -ncwait -nonat"
 alias fsconf="cd /usr/local/freeswitch/conf"
@@ -138,11 +137,13 @@ else
   export QT_IM_MODULE="ibus"
   export PROXY_IP=127.0.0.1
 fi
-export https_proxy="http://$PROXY_IP:15083"
-export ALL_PROXY="socks5://$PROXY_IP:15083"
+export https_proxy="http://$PROXY_IP:7890"
+export ALL_PROXY="socks5://$PROXY_IP:7890"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
 export VISUAL "nvim"
 
 /usr/bin/tabs 4
+
+export PATH=$PATH:/opt/environment/zig
