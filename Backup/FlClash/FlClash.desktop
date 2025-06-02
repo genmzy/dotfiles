@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=FlClash
+GenericName=FlClash
+Exec=/home/waves/App/FlClash/FlClash-0.8.84-linux-amd64.AppImage
+Icon=/home/waves/App/FlClash/FlClash.png
+Type=Application
+StartupNotify=true
+Categories=Network
+Keywords=FlClash;Clash;ClashMeta;Proxy
+
