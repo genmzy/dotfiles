@@ -48,6 +48,7 @@ alias fslog="cd /usr/local/freeswitch/log"
 # alias getFlexibleKey="gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30 && gsettings set org.gnome.desktop.peripherals.keyboard delay 250"
 
 source $ZSH/oh-my-zsh.sh
+source /etc/zsh_command_not_found
 
 # User configuration
 
