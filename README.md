@@ -1,6 +1,11 @@
 # After Ubuntu install
 
+<!--toc:start-->
+- [After Ubuntu install](#after-ubuntu-install)
+<!--toc:end-->
+
 - Net proxy
+
 ``` shell
 mkdir ~/App
 cp -r ./Backup/FlClash ~/App/
@@ -9,7 +14,8 @@ cp -r ./Backup/FlClash ~/App/
 ```
 
 - Apt sources
-```
+
+``` plain
 # /etc/apt/sources.list.d/ubuntu.sources
 
 Types: deb
@@ -27,11 +33,14 @@ Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
 sudo add-apt-repository ppa:apt-fast/stable
 sudo apt update && sudo apt-fast upgrade
-sudo apt-fast install bat ccat silversearcher-ag ripgrep lolcat htop ranger bear gcc make cmake curl tree neofetch git lua5.1 lua5.2 maven net-tools python3 pip
+sudo apt-fast install bat ccat silversearcher-ag ripgrep lolcat \
+  htop ranger bear gcc make cmake curl tree neofetch git lua5.1 \
+  lua5.2 maven net-tools python3 pip
 ```
 
 - Do copy
-```shell
+
+``` shell
 
 cp -r ./.config/* ~/.config/
 cp -r ./.cargo ~/
@@ -39,7 +48,8 @@ cp -r ./.gitconfig
 
 # cp -r ./.pip ~/.pip # ignore this since ubuntu24.04 use apt instead of pip
 
-mkdir ~/.local/share/fonts/ && cp -r ./Backup/LXGWWenKaiMono/* ./Backup/comicNFv3/* ~/.local/share/fonts/
+mkdir ~/.local/share/fonts/ && \
+  cp -r ./Backup/LXGWWenKaiMono/* ./Backup/comicNFv3/* ~/.local/share/fonts/
 cp ./.zshrc ~/
 cp ./.npmrc ~/
 cp ./.pam_environment ~/
@@ -50,6 +60,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 
 - Git configuration
+
 ``` shell
 
 git config --global credential.helper store
@@ -58,25 +69,36 @@ git config --global user.email "986299679@qq.com"
 ```
 
 - Set keyboard interval
-```shell
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30 && gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+
+``` shell
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30 && \
+  gsettings set org.gnome.desktop.peripherals.keyboard delay 250
 ```
 
 - Input method
-```
+
+``` plain
 # use fcitx5 as input method, and do not forget copy file **.pam_environment** above
 ```
 
 - Gnome beautify
-```shell
+
+``` shell
 sudo apt install ubuntu-desktop
 # mouse right-click and chose `Change Background` and set color to Blue
 
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme --depth=1
-cd WhiteSur-gtk-theme && ./install.sh -o solid -c light -l && sudo ./tweaks.sh -g -b "/usr/share/backgrounds/Monument_valley_by_orbitelambda.jpg"
+cd WhiteSur-gtk-theme && ./install.sh -o solid -c light -l && \
+  sudo ./tweaks.sh -g -b "/usr/share/backgrounds/Monument_valley_by_orbitelambda.jpg"
 
 cd ../
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme --depth=1
 cd WhiteSur-icon-theme && ./install.sh -b
 
 ```
+
+- Shortcut conflict
+  - Keyboard custom shortcut config change alt+space to ctrl+shift+space
+  - Fcitx5 trigger-input-method only keep control+space, not left-shift
+  - Fcitx5 change default-previous-page to `-` and default-next-page to `=`
+  - Fcitx5-addon - input-method - keyboard delete trigger-hint-mode and trigger-hint-mode-for-one-time
