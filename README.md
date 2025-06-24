@@ -102,3 +102,6 @@ cd WhiteSur-icon-theme && ./install.sh -b
   - Fcitx5 trigger-input-method only keep control+space, not left-shift
   - Fcitx5 change default-previous-page to `-` and default-next-page to `=`
   - Fcitx5-addon - input-method - keyboard delete trigger-hint-mode and trigger-hint-mode-for-one-time
+
+- Problems
+  - First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again
