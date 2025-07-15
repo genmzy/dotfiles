@@ -71,8 +71,8 @@ git config --global user.email "986299679@qq.com"
 - Set keyboard interval
 
 ``` shell
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30 && \
-  gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20 && \
+  gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 ```
 
 - Input method
