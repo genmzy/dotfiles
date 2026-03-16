@@ -8,6 +8,7 @@
 # --- Typography ---
 #font-family = "Monaspace Neon Frozen"
 font-family = "0xProto"
+font-family = "Maple Mono NF CN"
 font-size = 15.0
 font-thicken = true
 adjust-cell-height = -3
@@ -95,3 +96,6 @@ keybind = ctrl+shift+comma=reload_config
 # --- Performance ---
 # Generous scrollback (25MB)
 scrollback-limit = 25000000
+
+# --- Beautify ---
+custom-shader = ~/.config/ghostty/cursor_smear.glsl
