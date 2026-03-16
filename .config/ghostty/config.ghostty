@@ -28,9 +28,11 @@ window-padding-y = 0
 window-save-state = always
 window-theme = ghostty
 window-decoration = none
+gtk-toolbar-style = raised
+gtk-wide-tabs = false
+# comment this will hidden tab tar
 window-show-tab-bar = never
 gtk-tabs-location = hidden
-gtk-toolbar-style = raised
 
 # --- Cursor ---
 cursor-style = bar
