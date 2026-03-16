@@ -16,7 +16,7 @@ adjust-cell-width = 0
 
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
-theme = TokyoNight Moon
+theme = Snazzy
 #theme = Catppuccin Mocha
 
 # --- Window and Appearance ---
