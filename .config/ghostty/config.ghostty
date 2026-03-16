@@ -79,8 +79,8 @@ keybind = ctrl+alt+-=move_tab:-1
 keybind = ctrl+alt+==move_tab:1
 
 # Font size
-keybind = alt+space>k=increase_font_size:1
-keybind = alt+space>j=decrease_font_size:1
+keybind = alt+space>k=increase_font_size:0.3
+keybind = alt+space>j=decrease_font_size:0.3
 keybind = alt+space>space=reset_font_size
 
 # Quick terminal global hotkey
