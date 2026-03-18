@@ -6,18 +6,17 @@
 # View options: ghostty +show-config --default --docs
 
 # --- Typography ---
-#font-family = "Monaspace Neon Frozen"
+#font-family = "MonoLisa"
 font-family = "0xProto"
 font-family = "Maple Mono NF CN"
-font-size = 15.0
+font-size = 14.7
 font-thicken = true
 adjust-cell-height = -3
 adjust-cell-width = 0
 
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
-theme = Snazzy
-#theme = Catppuccin Mocha
+theme = Catppuccin Mocha
 
 # --- Window and Appearance ---
 background-opacity = 0.99
