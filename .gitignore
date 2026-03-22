@@ -21,3 +21,8 @@
 !.npmrc
 !.cargo/
 !README.md
+!/.local/
+!/.config/fcitx5
+!/.config/fuzzel
+!/.config/DankMaterialShell
+!/.config/niri
