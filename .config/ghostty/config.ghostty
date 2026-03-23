@@ -2,8 +2,52 @@
 # Ghostty Terminal - Complete Configuration
 # ============================================
 # File: ~/.config/ghostty/config
-# Reload: Cmd+Shift+, (macOS)
 # View options: ghostty +show-config --default --docs
+
+# --- Keybindings ---
+
+# clean all default keybindings
+keybind = clear
+
+# Tabs
+keybind = alt+t=new_tab
+keybind = alt+-=previous_tab
+keybind = alt+==next_tab
+keybind = alt+w=close_surface
+keybind = alt+l=toggle_tab_overview
+
+# search
+keybind = alt+f=start_search
+
+# window
+keybind = alt+f11=toggle_fullscreen
+
+# Splits
+keybind = alt+ctrl+\=new_split:right
+keybind = alt+\=new_split:down
+keybind = ctrl+alt+h=goto_split:left
+keybind = ctrl+alt+l=goto_split:right
+keybind = ctrl+alt+k=goto_split:top
+keybind = ctrl+alt+j=goto_split:bottom
+keybind = ctrl+alt+-=move_tab:-1
+keybind = ctrl+alt+==move_tab:1
+
+# Font size resize
+keybind = alt+space>k=increase_font_size:0.3
+keybind = alt+space>j=decrease_font_size:0.3
+keybind = alt+space>space=reset_font_size
+
+# Quick terminal global hotkey
+keybind = global:alt+q=toggle_quick_terminal
+
+# Splits management
+keybind = alt+space>e=equalize_splits
+keybind = alt+space>f=toggle_split_zoom
+
+# Reload config
+keybind = alt+,=reload_config
+
+# ***********************************************
 
 # --- Typography ---
 # font-family = "MonoLisa"
@@ -54,45 +98,6 @@ clipboard-paste-bracketed-safe = true
 
 # --- Shell Integration ---
 shell-integration = detect
-
-# --- Keybindings ---
-# Tabs
-keybind = alt+t=new_tab
-keybind = alt+-=previous_tab
-keybind = alt+==next_tab
-keybind = alt+w=close_surface
-keybind = alt+l=toggle_tab_overview
-
-# search
-keybind = alt+f=start_search
-
-# window
-keybind = alt+f11=toggle_fullscreen
-
-# Splits
-keybind = alt+ctrl+\=new_split:right
-keybind = alt+\=new_split:down
-keybind = ctrl+alt+h=goto_split:left
-keybind = ctrl+alt+l=goto_split:right
-keybind = ctrl+alt+k=goto_split:top
-keybind = ctrl+alt+j=goto_split:bottom
-keybind = ctrl+alt+-=move_tab:-1
-keybind = ctrl+alt+==move_tab:1
-
-# Font size
-keybind = alt+space>k=increase_font_size:0.3
-keybind = alt+space>j=decrease_font_size:0.3
-keybind = alt+space>space=reset_font_size
-
-# Quick terminal global hotkey
-keybind = global:ctrl+grave_accent=toggle_quick_terminal
-
-# Splits management
-keybind = alt+space>e=equalize_splits
-keybind = alt+space>f=toggle_split_zoom
-
-# Reload config
-keybind = ctrl+shift+comma=reload_config
 
 # --- Performance ---
 # Generous scrollback (25MB)
