@@ -105,3 +105,16 @@ cd WhiteSur-icon-theme && ./install.sh -b
 
 - Problems
   - First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again
+
+
+# Dank-Meterial-Shell Linux based on ubuntu
+- require `ubuntu >= 25.10`
+- install niri and dsm
+``` shell
+sudo add-apt-repository ppa:avengemedia/danklinux
+sudo add-apt-repository ppa:avengemedia/dms
+sudo apt update
+sudo apt install niri dms
+```
+- after install, use niri `wip/branch` branch build **niri** binary replacing with `/usr/bin/niri` for blur effect
+- should install `brightnessctl` and `wpctl` to control brightness and voice with keyboard, besides, should add user to group **video** like: `sudo usermod -aG video genmzy`

@@ -23,7 +23,7 @@ alias fs="fs_cli"
 alias fsconf="cd /usr/local/freeswitch/conf"
 alias fslog="cd /usr/local/freeswitch/log"
 alias sfs_testing="sudo freeswitch -nc -nonat -conf /usr/local/freeswitch/conf.testing -log /usr/local/freeswitch/log -db /usr/local/freeswitch/db"
-alias sra="sudo yazi"
+alias sra="sudo ranger"
 alias ra="yazi"
 alias l='ls -CF'
 alias mvSwap="~/.config/scripts/mvSwap.sh"
@@ -128,17 +128,20 @@ if grep -qi microsoft /proc/version; then
   export windownload=/mnt/c/Users/waves/Downloads/
   export winfonts=/mnt/d/font/
 else
-  export XMODIFIERS="@im=ibus"
-  export QT_IM_MODULE="ibus"
+  # export XMODIFIERS="@im=ibus"
+  # export QT_IM_MODULE="ibus"
   export PROXY_IP=127.0.0.1
 fi
 export https_proxy="http://$PROXY_IP:7890"
+export http_proxy="http://$PROXY_IP:7890"
 export ALL_PROXY="socks5://$PROXY_IP:7890"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.config/emacs/bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
 /usr/bin/tabs 4
 
 export PATH=$PATH:/opt/environment/zig
+# autoload -U compinit; compinit
+export TERM='xterm-256color'
