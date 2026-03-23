@@ -396,7 +396,7 @@ window-rule {
 	draw-border-with-background true
 	open-on-workspace "term"
 	open-maximized true
-	opacity 0.95
+	opacity 0.94
 }
 
 binds {
