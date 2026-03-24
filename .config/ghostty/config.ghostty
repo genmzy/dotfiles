@@ -9,6 +9,9 @@
 # clean all default keybindings
 keybind = clear
 
+# Copy/Paste
+keybind = alt+p=paste_from_clipboard
+
 # Tabs
 keybind = alt+t=new_tab
 keybind = alt+-=previous_tab
