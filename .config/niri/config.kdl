@@ -268,6 +268,7 @@ layout {
 		// top 64
 		// bottom 64
 	}
+    background-color "transparent"
 }
 
 // Add lines like this to spawn processes at startup.
@@ -333,6 +334,11 @@ layer-rule {
 		blur true
 	}
 	opacity 0.9
+}
+
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
 }
 
 // Work around WezTerm's initial configure bug
