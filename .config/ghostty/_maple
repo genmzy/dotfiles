@@ -53,20 +53,19 @@ keybind = alt+,=reload_config
 # ***********************************************
 
 # --- Typography ---
-font-family = "MonoLisa"
 # font-family = "0xProto"
 font-family = "Maple Mono NF CN"
-font-size = 14.7
-font-feature = "zero,ss07,ss08"
-adjust-cell-height = 0
+#font-size = 14.6
+font-size = 15
+font-feature = "cv02,cv05,cv08,cv11,calt"
+adjust-cell-height = 2
 font-thicken = true
 adjust-cell-width = 0
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
-# theme = Catppuccin Mocha
-theme = Snazzy
-
 # --- Window and Appearance ---
+theme = Catppuccin Mocha
+
 background-opacity = 1.0
 background-blur-radius = 30
 # macos-titlebar-style = transparent
