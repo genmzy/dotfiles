@@ -32,8 +32,8 @@ keybind = ctrl+alt+h=goto_split:left
 keybind = ctrl+alt+l=goto_split:right
 keybind = ctrl+alt+k=goto_split:top
 keybind = ctrl+alt+j=goto_split:bottom
-keybind = ctrl+alt+-=move_tab:-1
-keybind = ctrl+alt+==move_tab:1
+keybind = ctrl+alt+h=move_tab:-1
+keybind = ctrl+alt+l=move_tab:1
 
 # Font size resize
 keybind = alt+space>k=increase_font_size:0.3
@@ -58,8 +58,8 @@ font-family = "Maple Mono"
 font-family = "Maple Mono NF CN"
 font-variation = "wght=300"
 font-variation-italic = "wght=300"
-font-variation-bold = "wght=600"
-font-variation-bold-italic = "wght=600"
+font-variation-bold = "wght=550"
+font-variation-bold-italic = "wght=550"
 font-size = 15
 font-feature = "cv02,cv05,cv08,cv11,calt"
 adjust-cell-height = 2
