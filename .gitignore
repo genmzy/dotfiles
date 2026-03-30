@@ -26,4 +26,5 @@
 !/.config/fuzzel
 !/.config/DankMaterialShell
 !/.config/niri
+!/.config/stylua
 !/update.sh
