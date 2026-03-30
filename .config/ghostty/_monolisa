@@ -1,0 +1,114 @@
+# ============================================
+# Ghostty Terminal - Complete Configuration
+# ============================================
+# File: ~/.config/ghostty/config
+# View options: ghostty +show-config --default --docs
+
+# --- Keybindings ---
+
+# clean all default keybindings
+keybind = clear
+
+# Copy/Paste
+keybind = alt+p=paste_from_clipboard
+
+# Tabs
+keybind = alt+t=new_tab
+keybind = alt+l=previous_tab
+keybind = alt+h=next_tab
+keybind = alt+w=close_surface
+keybind = alt+o=toggle_tab_overview
+
+# search
+keybind = alt+f=start_search
+
+# window
+keybind = alt+f11=toggle_fullscreen
+
+# Splits
+keybind = alt+ctrl+\=new_split:right
+keybind = alt+\=new_split:down
+keybind = ctrl+alt+h=goto_split:left
+keybind = ctrl+alt+l=goto_split:right
+keybind = ctrl+alt+k=goto_split:top
+keybind = ctrl+alt+j=goto_split:bottom
+keybind = ctrl+alt+-=move_tab:-1
+keybind = ctrl+alt+==move_tab:1
+
+# Font size resize
+keybind = alt+space>k=increase_font_size:0.3
+keybind = alt+space>j=decrease_font_size:0.3
+keybind = alt+space>space=reset_font_size
+
+# Quick terminal global hotkey
+keybind = global:alt+q=toggle_quick_terminal
+
+# Splits management
+keybind = alt+space>e=equalize_splits
+keybind = alt+space>f=toggle_split_zoom
+
+# Reload config
+keybind = alt+,=reload_config
+
+# ***********************************************
+
+# --- Typography ---
+font-family = "MonoLisa"
+# font-family = "0xProto"
+font-family = "Maple Mono NF CN"
+font-size = 14.7
+font-feature = "zero,ss07,ss08"
+adjust-cell-height = 0
+font-thicken = true
+adjust-cell-width = 0
+# --- Theme and Colors ---
+# Catppuccin with automatic light/dark switching
+# theme = Catppuccin Mocha
+theme = Snazzy
+
+# --- Window and Appearance ---
+background-opacity = 1.0
+background-blur-radius = 30
+# macos-titlebar-style = transparent
+window-padding-x = 0
+window-padding-y = 0
+window-save-state = always
+window-theme = ghostty
+window-decoration = none
+gtk-toolbar-style = raised
+gtk-wide-tabs = false
+# comment this will hidden tab tar
+window-show-tab-bar = never
+gtk-tabs-location = hidden
+
+# --- Cursor ---
+cursor-style = bar
+cursor-style-blink = true
+cursor-opacity = 0.8
+
+# --- Mouse ---
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+# --- Quick Terminal (Quake-style dropdown) ---
+quick-terminal-position = top
+quick-terminal-screen = mouse
+quick-terminal-autohide = true
+quick-terminal-animation-duration = 0.15
+
+# --- Security ---
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
+
+# --- Shell Integration ---
+shell-integration = detect
+
+# --- Performance ---
+# Generous scrollback (25MB)
+scrollback-limit = 25000000
+
+# --- Beautify ---
+custom-shader = ~/.config/ghostty/cursor_smear.glsl
+
+# --- single instance ---
+gtk-single-instance = true
