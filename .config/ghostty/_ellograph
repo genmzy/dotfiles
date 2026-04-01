@@ -53,15 +53,10 @@ keybind = alt+,=reload_config
 # ***********************************************
 
 # --- Typography ---
-font-family = "Geist Mono"
+font-family = "Ellograph CF"
 font-family = "Maple Mono NF CN"
-font-feature = "ss11"
-# font-variation = "wght=470"
-# font-variation-italic = "wght=470"
-font-variation-bold = "wght=500"
-font-variation-bold-italic = "wght=500"
-font-size = 14.7
-adjust-cell-height = 2
+font-size = 15.6
+adjust-cell-height = 3
 font-thicken = true
 adjust-cell-width = 0
 # --- Theme and Colors ---
