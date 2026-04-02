@@ -67,7 +67,7 @@ adjust-cell-width = 0
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
 # --- Window and Appearance ---
-theme = Snazzy
+theme = Catppuccin Mocha
 
 background-opacity = 1.0
 background-blur-radius = 30
