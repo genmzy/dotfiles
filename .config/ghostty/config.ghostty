@@ -14,8 +14,8 @@ keybind = alt+p=paste_from_clipboard
 
 # Tabs
 keybind = alt+t=new_tab
-keybind = alt+l=previous_tab
-keybind = alt+h=next_tab
+keybind = alt+-=previous_tab
+keybind = alt+==next_tab
 keybind = alt+w=close_surface
 keybind = alt+o=toggle_tab_overview
 
