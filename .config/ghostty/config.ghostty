@@ -56,10 +56,10 @@ keybind = alt+,=reload_config
 font-family = "Geist Mono"
 font-family = "Maple Mono NF CN"
 font-feature = "ss11"
-# font-variation = "wght=470"
-# font-variation-italic = "wght=470"
-font-variation-bold = "wght=500"
-font-variation-bold-italic = "wght=500"
+font-variation = "wght=450"
+font-variation-italic = "wght=450"
+font-variation-bold = "wght=600"
+font-variation-bold-italic = "wght=600"
 font-size = 14.7
 adjust-cell-height = 2
 font-thicken = true
@@ -67,7 +67,7 @@ adjust-cell-width = 0
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
 # --- Window and Appearance ---
-theme = Catppuccin Mocha
+theme = Snazzy
 
 background-opacity = 1.0
 background-blur-radius = 30
