@@ -364,9 +364,11 @@ workspace "app" {}
 
 workspace "term" {
 	layout {
-		gaps 8
+		gaps 6
 		border {
-			off
+			on
+			width 2
+			active-color "#f5c2e7"
 		}
 	}
 }
@@ -384,7 +386,7 @@ workspace "term" {
 }
 
 window-rule {
-	opacity 0.90
+	opacity 0.94
 	draw-border-with-background false
 	// Example: enable rounded corners for all windows.
 	geometry-corner-radius 8
@@ -392,17 +394,21 @@ window-rule {
 	
 	background-effect {
 		xray true
-		blur true
+		blur false
 	}
 }
 
 window-rule {
 	match app-id=r#"^com\.mitchellh\.ghostty$"#
 	match app-id=r#"^com\.wezfurlong\.wezterm$"#
-	draw-border-with-background true
+	draw-border-with-background false
 	open-on-workspace "term"
 	open-maximized true
-	opacity 0.94
+	opacity 1.0
+	background-effect {
+		xray false
+		blur false
+	}
 }
 
 binds {

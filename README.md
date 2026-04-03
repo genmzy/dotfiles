@@ -6,7 +6,7 @@
 
 - Net proxy
 
-``` shell
+``` bash
 mkdir ~/App
 cp -r ./Backup/FlClash ~/App/
 # run App/FlClash/FlClash-0.8.84-linux-amd64.AppImage
@@ -40,8 +40,7 @@ sudo apt-fast install bat ccat silversearcher-ag ripgrep lolcat \
 
 - Do copy
 
-``` shell
-
+``` bash
 cp -r ./.config/* ~/.config/
 cp -r ./.cargo ~/
 cp -r ./.gitconfig
@@ -61,8 +60,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 - Git configuration
 
-``` shell
-
+``` bash
 git config --global credential.helper store
 git config --global user.name "genmzy"
 git config --global user.email "986299679@qq.com"
@@ -70,7 +68,7 @@ git config --global user.email "986299679@qq.com"
 
 - Set keyboard interval
 
-``` shell
+``` bash
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20 && \
   gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 ```
@@ -83,7 +81,7 @@ gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20 && \
 
 - Gnome beautify
 
-``` shell
+``` bash
 sudo apt install ubuntu-desktop
 # mouse right-click and chose `Change Background` and set color to Blue
 
@@ -106,15 +104,18 @@ cd WhiteSur-icon-theme && ./install.sh -b
 - Problems
   - First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again
 
-
 # Dank-Meterial-Shell Linux based on ubuntu
+
 - require `ubuntu >= 25.10`
 - install niri and dsm
-``` shell
+
+``` bash
 sudo add-apt-repository ppa:avengemedia/danklinux
 sudo add-apt-repository ppa:avengemedia/dms
 sudo apt update
 sudo apt install niri dms
 ```
+
 - after install, use niri `wip/branch` branch build **niri** binary replacing with `/usr/bin/niri` for blur effect
 - should install `brightnessctl` and `wpctl` to control brightness and voice with keyboard, besides, should add user to group **video** like: `sudo usermod -aG video genmzy`
+- [wallpapers](https://github.com/genmzy/catppuccin-wallpapers)

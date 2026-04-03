@@ -2,8 +2,9 @@ keybinding:
   universal:
     quit-alt1: '<esc>' # alternative/alias of quit
 gui:
-  border: single
+  border: rounded
   theme:
     selectedLineBgColor:
-      - reverse
+      - bold
+      - black
   nerdFontsVersion: "3"
