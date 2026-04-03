@@ -5,11 +5,16 @@
 !.config/fzf
 !.config/p10k
 !.config/yazi
-!.config/neofetch
 !.config/scripts
 !.config/lazygit/
 !.config/ghostty
 !.config/nvim
+!/.config/fcitx5
+!/.config/fuzzel
+!/.config/DankMaterialShell
+!/.config/niri
+!/.config/stylua
+!/.config/fastfetch
 .config/lazygit/state.yml
 !install.sh
 !.gitignore
@@ -22,9 +27,4 @@
 !.cargo/
 !README.md
 !/.local/
-!/.config/fcitx5
-!/.config/fuzzel
-!/.config/DankMaterialShell
-!/.config/niri
-!/.config/stylua
 !/update.sh
