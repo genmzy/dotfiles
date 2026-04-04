@@ -66,9 +66,9 @@ font-thicken = true
 adjust-cell-width = 0
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
-# --- Window and Appearance ---
 theme = Catppuccin Mocha
 
+# --- Window and Appearance ---
 background-opacity = 1.0
 # background-blur-radius = 30
 background-image = ~/.config/ghostty/dark-cat.png
