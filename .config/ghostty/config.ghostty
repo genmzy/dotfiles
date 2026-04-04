@@ -32,8 +32,8 @@ keybind = ctrl+alt+h=goto_split:left
 keybind = ctrl+alt+l=goto_split:right
 keybind = ctrl+alt+k=goto_split:top
 keybind = ctrl+alt+j=goto_split:bottom
-keybind = ctrl+alt+h=move_tab:-1
-keybind = ctrl+alt+l=move_tab:1
+keybind = ctrl+alt+-=move_tab:-1
+keybind = ctrl+alt+==move_tab:1
 
 # Font size resize
 keybind = alt+space>k=increase_font_size:0.3
@@ -70,7 +70,9 @@ adjust-cell-width = 0
 theme = Catppuccin Mocha
 
 background-opacity = 1.0
-background-blur-radius = 30
+# background-blur-radius = 30
+background-image = ~/.config/ghostty/dark-cat.png
+background-image-opacity = 0.1
 # macos-titlebar-style = transparent
 window-padding-x = 0
 window-padding-y = 0

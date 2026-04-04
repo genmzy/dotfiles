@@ -4,8 +4,8 @@ cwd = { fg = "#94e2d5" }
 hovered         = { fg = "#1e1e2e", bg = "#94e2d5" }
 preview_hovered = { fg = "#1e1e2e", bg = "#cdd6f4" }
 
-find_keyword  = { fg = "#f9e2af", italic = true }
-find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
+find_keyword  = { fg = "#f9e2af", italic = false }
+find_position = { fg = "#f5c2e7", bg = "reset", italic = false }
 
 marker_copied   = { fg = "#a6e3a1", bg = "#a6e3a1" }
 marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
