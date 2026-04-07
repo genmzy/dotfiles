@@ -1,9 +1,9 @@
 #
 # --- spacemono with ligatures but no fi fl ligature ---
 #
-font-family = "LigaSpaceMono"
+font-family = "Liga DM Mono"
 font-family = "Maple Mono NF CN"
-font-size = 15.5
-adjust-cell-height = -3
+font-size = 15.7
+adjust-cell-height = 1
 font-thicken = true
 adjust-cell-width = -1
