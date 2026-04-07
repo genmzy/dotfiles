@@ -1,0 +1,10 @@
+#
+# --- spacemono with ligatures but no fi fl ligature ---
+#
+font-family = "0xProto"
+font-family = "Maple Mono NF CN"
+font-size = 14.6
+# font-feature = "ss01"
+adjust-cell-height = -3
+font-thicken = true
+adjust-cell-width = 0

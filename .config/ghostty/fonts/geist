@@ -1,0 +1,14 @@
+#
+# --- Geist Mono ---
+#
+font-family = "Geist Mono"
+font-family = "Maple Mono NF CN"
+font-feature = "ss11"
+font-variation = "wght=400"
+font-variation-italic = "wght=400"
+font-variation-bold = "wght=500"
+font-variation-bold-italic = "wght=500"
+font-size = 14.7
+adjust-cell-height = 2
+font-thicken = true
+adjust-cell-width = 0

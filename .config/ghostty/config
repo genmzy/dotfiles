@@ -4,6 +4,13 @@
 # File: ~/.config/ghostty/config
 # View options: ghostty +show-config --default --docs
 
+# --- Typography ---
+config-file = fonts/maple
+
+# --- Theme and Colors ---
+# Catppuccin with automatic light/dark switching
+theme = Catppuccin Mocha
+
 # --- Keybindings ---
 
 # clean all default keybindings
@@ -51,19 +58,6 @@ keybind = alt+space>f=toggle_split_zoom
 keybind = alt+,=reload_config
 
 # ***********************************************
-
-# --- Typography ---
-# font-family = "MonoLisa"
-font-family = "0xProto"
-font-family = "Maple Mono NF CN"
-font-size = 14.6
-# font-feature = "ss01"
-adjust-cell-height = -3
-font-thicken = true
-adjust-cell-width = 0
-# --- Theme and Colors ---
-# Catppuccin with automatic light/dark switching
-theme = Catppuccin Mocha
 
 # --- Window and Appearance ---
 background-opacity = 1.0
