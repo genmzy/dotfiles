@@ -3,8 +3,8 @@
 #
 font-family = "Maple Mono"
 font-family = "Maple Mono NF CN"
-font-variation = "wght=350"
-font-variation-italic = "wght=350"
+font-variation = "wght=300"
+font-variation-italic = "wght=300"
 font-variation-bold = "wght=450"
 font-variation-bold-italic = "wght=450"
 font-size = 15
