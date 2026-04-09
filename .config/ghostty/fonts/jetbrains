@@ -1,0 +1,14 @@
+#
+# --- JetBrains ---
+#
+font-family = "JetBrains Mono"
+font-family = "Maple Mono NF CN"
+font-variation = "wght=450"
+font-variation-italic = "wght=450"
+font-variation-bold = "wght=600"
+font-variation-bold-italic = "wght=600"
+font-size = 14.7
+font-feature = "cv03,cv10,cv11"
+adjust-cell-height = 1
+font-thicken = true
+adjust-cell-width = 0
