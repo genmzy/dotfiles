@@ -15,6 +15,7 @@
 !/.config/niri
 !/.config/stylua
 !/.config/fastfetch
+!/.config/clangd
 .config/lazygit/state.yml
 !install.sh
 !.gitignore
