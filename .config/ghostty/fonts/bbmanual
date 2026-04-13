@@ -1,0 +1,10 @@
+#
+# --- spacemono with ligatures but no fi fl ligature ---
+#
+font-family = "Liga BB Manual Mono Pro TX"
+font-family = "Maple Mono NF CN"
+font-size = 15.4
+# font-feature = "ss01"
+adjust-cell-height = -7
+font-thicken = true
+adjust-cell-width = 0
