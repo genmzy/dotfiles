@@ -1,7 +1,7 @@
 #
 # --- spacemono with ligatures but no fi fl ligature ---
 #
-font-family = "Liga BB Manual Mono Pro TX"
+font-family = "Liga BB Manual Mono Pro TX SmMedium"
 font-family = "Maple Mono NF CN"
 font-size = 15.4
 # font-feature = "ss01"
