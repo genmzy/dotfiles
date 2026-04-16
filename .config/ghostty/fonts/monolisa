@@ -11,4 +11,4 @@ font-variation-bold-italic = "wght=600"
 font-size = 14.7
 adjust-cell-height = 0
 font-thicken = true
-adjust-cell-width = 0
+adjust-cell-width = -1

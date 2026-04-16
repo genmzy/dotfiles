@@ -9,6 +9,6 @@ font-variation-bold = "wght=500"
 font-variation-bold-italic = "wght=500"
 font-size = 15.3
 #font-feature = "cv02,cv05,cv08,cv10,cv11,calt,cv32,cv35"
-adjust-cell-height = 2
+adjust-cell-height = 4
 font-thicken = true
 adjust-cell-width = 0
