@@ -31,6 +31,9 @@ alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
 alias gogo="cd ~/Workspace/golang/src/"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
+alias ff="fastfetch"
+
+ff
 
 alias fs_memcheck="sudo valgrind --tool=memcheck --error-limit=no --log-file=vg.log --leak-check=full --leak-resolution=high --show-reachable=yes /usr/local/freeswitch/bin/freeswitch -vg -ncwait -nonat"
 alias fsconf="cd /usr/local/freeswitch/conf"
