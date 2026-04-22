@@ -1,0 +1,10 @@
+#
+# --- sf mono ---
+#
+font-family = "Liga SFMono Nerd Font"
+font-family = "Maple Mono NF CN"
+font-size = 15.0
+# font-feature = "ss01"
+adjust-cell-height = 3
+font-thicken = true
+adjust-cell-width = 0
