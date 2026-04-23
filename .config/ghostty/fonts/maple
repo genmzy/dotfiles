@@ -8,7 +8,8 @@ font-variation-italic = "wght=330"
 font-variation-bold = "wght=700"
 font-variation-bold-italic = "wght=700"
 font-size = 15
-font-feature = "cv02,cv05,cv08,cv11,calt,cv32,cv35"
+# serif f:cv11   a    g    r  ==>  f(i) l(i)
+font-feature = "cv02,cv05,cv08,calt,cv32,cv35"
 adjust-cell-height = 2
 font-thicken = true
 adjust-cell-width = 0
