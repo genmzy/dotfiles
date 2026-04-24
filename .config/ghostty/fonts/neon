@@ -7,7 +7,7 @@ font-variation = "wght=350"
 font-variation-italic = "wght=350"
 font-variation-bold = "wght=450"
 font-variation-bold-italic = "wght=450"
-font-size = 15.7
+font-size = 15
 font-feature = "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'"
 adjust-cell-height = 2
 font-thicken = true

@@ -3,7 +3,9 @@
 #
 font-family = "Liga SFMono"
 font-family = "Maple Mono NF CN"
-font-size = 15.0
+# font-style = "medium"
+font-style-bold = "medium"
+font-size = 15.1
 # font-feature = "ss01"
 adjust-cell-height = 3
 font-thicken = true
