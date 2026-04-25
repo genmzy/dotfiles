@@ -6,8 +6,8 @@ font-family = "Maple Mono NF CN"
 font-feature = "ss11"
 font-variation = "wght=470"
 font-variation-italic = "wght=470"
-font-variation-bold = "wght=550"
-font-variation-bold-italic = "wght=550"
+font-variation-bold = "wght=600"
+font-variation-bold-italic = "wght=600"
 font-size = 14.7
 adjust-cell-height = 2
 font-thicken = true

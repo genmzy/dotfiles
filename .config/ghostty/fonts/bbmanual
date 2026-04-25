@@ -5,6 +5,6 @@ font-family = "Liga BB Manual Mono Pro TX SmMedium"
 font-family = "LXGW WenKai Mono"
 font-size = 15.7
 # font-feature = "ss01"
-adjust-cell-height = -7
+adjust-cell-height = -8
 font-thicken = true
 adjust-cell-width = 0
