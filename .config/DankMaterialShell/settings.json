@@ -6,7 +6,7 @@
     "catppuccin": {
       "dark": {
         "flavor": "mocha",
-        "accent": "sapphire"
+        "accent": "lavender"
       },
       "light": {
         "flavor": "latte",
@@ -105,7 +105,8 @@
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 50
+      "width": 50,
+      "deviceName": "backlight:intel_backlight"
     },
     {
       "id": "wifi",
@@ -218,7 +219,7 @@
   "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": false,
   "weatherEnabled": true,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",
@@ -236,13 +237,13 @@
       "cursorHideTimeout": 0
     }
   },
-  "launcherLogoMode": "compositor",
-  "launcherLogoCustomPath": "",
+  "launcherLogoMode": "apps",
+  "launcherLogoCustomPath": "/home/genmzy/Pictures/genmzy.png",
   "launcherLogoColorOverride": "primary",
   "launcherLogoColorInvertOnMode": false,
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
-  "launcherLogoSizeOffset": 4,
+  "launcherLogoSizeOffset": 0,
   "fontFamily": "SF Pro Display",
   "monoFontFamily": "Geist Mono",
   "fontWeight": 700,
