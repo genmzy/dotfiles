@@ -7,6 +7,6 @@ font-family = "Maple Mono NF CN"
 font-style-bold = "semibold"
 font-size = 15.1
 # font-feature = "ss01"
-adjust-cell-height = 3
+adjust-cell-height = 4
 font-thicken = true
 adjust-cell-width = 0
