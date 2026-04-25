@@ -123,3 +123,9 @@ sudo apt install niri dms
 ## problem fix
 
 - [x] touchboard problem: touch board will not work while run lots of time, no matter **niri** or **gnome**, should enable `security-boot` in bios
+
+## firefox fullwindow but not full-monitor
+
+- useful when want full-window video playing.
+- enter `about:config` on search bar.
+- set `full-screen-api.ignore-widgets` to `true`, now **F11** will works.
