@@ -129,3 +129,8 @@ sudo apt install niri dms
 - useful when want full-window video playing.
 - enter `about:config` on search bar.
 - set `full-screen-api.ignore-widgets` to `true`, now **F11** will works.
+
+## steam cannot display but a black screen
+
+- find snapd steam desktop file locaiton: `/var/lib/snapd/desktop/applications/steam_steam.desktop`
+- change `Exec` line and add paramter: `-system-composer`
