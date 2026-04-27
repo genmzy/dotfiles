@@ -3,8 +3,8 @@
 #
 font-family = "Cascadia Code"
 font-family = "Maple Mono NF CN"
-font-variation = "wght=360"
-font-variation-italic = "wght=360"
+font-variation = "wght=330"
+font-variation-italic = "wght=330"
 font-variation-bold = "wght=500"
 font-variation-bold-italic = "wght=500"
 font-size = 15.3
