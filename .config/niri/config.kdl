@@ -400,6 +400,8 @@ window-rule {
 
 window-rule {
 	match app-id=r#"firefox$"#
+	match app-id=r#"steam$"#
+	match app-id=r#"zen$"#
 	opacity 1.0
 }
 
