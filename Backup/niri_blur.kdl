@@ -313,6 +313,15 @@ animations {
 	// slowdown 3.0
 }
 
+// window blur
+blur {
+	passes 0
+	// passes 3
+	offset 3
+	noise 0.02
+	saturation 1.5
+}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
@@ -320,6 +329,10 @@ animations {
 layer-rule {
 	match namespace="launcher"
 	match namespace="quickshell"
+	background-effect {
+		xray false
+		blur true
+	}
 	opacity 0.9
 }
 
@@ -378,6 +391,11 @@ window-rule {
 	// Example: enable rounded corners for all windows.
 	geometry-corner-radius 8
 	clip-to-geometry true
+	
+	background-effect {
+		xray true
+		blur false
+	}
 }
 
 window-rule {
@@ -394,6 +412,10 @@ window-rule {
 	open-on-workspace "term"
 	open-maximized true
 	opacity 1.0
+	background-effect {
+		xray false
+		blur false
+	}
 }
 
 binds {
