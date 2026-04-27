@@ -4,11 +4,11 @@
 font-family = "Geist Mono"
 font-family = "Maple Mono NF CN"
 font-feature = "ss11"
-font-variation = "wght=470"
-font-variation-italic = "wght=470"
+font-variation = "wght=500"
+font-variation-italic = "wght=500"
 font-variation-bold = "wght=600"
 font-variation-bold-italic = "wght=600"
-font-size = 14.7
+font-size = 14.4
 adjust-cell-height = 2
 font-thicken = true
 adjust-cell-width = 0
