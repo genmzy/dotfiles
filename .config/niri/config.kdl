@@ -360,6 +360,17 @@ workspace "term" {
 	}
 }
 
+workspace "game" {
+	layout {
+		gaps 6
+		border {
+			on
+			width 4
+			active-color "#a6e3a1"
+		}
+	}
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -382,7 +393,6 @@ window-rule {
 
 window-rule {
 	match app-id=r#"firefox$"#
-	match app-id=r#"steam$"#
 	match app-id=r#"zen$"#
 	opacity 1.0
 }
@@ -393,6 +403,12 @@ window-rule {
 	draw-border-with-background false
 	open-on-workspace "term"
 	open-maximized true
+	opacity 1.0
+}
+
+window-rule {
+	match app-id=r#"steam$"#
+	open-on-workspace "game"
 	opacity 1.0
 }
 
