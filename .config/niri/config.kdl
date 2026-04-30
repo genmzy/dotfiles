@@ -408,6 +408,7 @@ window-rule {
 
 window-rule {
 	match app-id=r#"steam$"#
+	match app-id=r#"^love"#
 	open-on-workspace "game"
 	opacity 1.0
 }
