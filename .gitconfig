@@ -1,0 +1,8 @@
+[user]
+	name = genmzy
+	email = 986299679@qq.com
+[core]
+	editor = vim
+	quotepath = false
+[credential]
+	helper = store

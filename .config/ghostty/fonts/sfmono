@@ -1,0 +1,12 @@
+#
+# --- sf mono ---
+#
+font-family = "Liga SFMono"
+font-family = "Maple Mono NF CN"
+# font-style = "medium"
+font-style-bold = "semibold"
+font-size = 14.7
+# font-feature = "ss01"
+adjust-cell-height = 4
+font-thicken = true
+adjust-cell-width = 0

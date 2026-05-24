@@ -1,0 +1,10 @@
+#
+# --- comic code ---
+#
+font-family = "ComicCodeLigaturesNerdFontComplete Nerd Font"
+font-family = "LXGW WenKai Mono"
+font-size = 15
+# font-feature = "ss01"
+adjust-cell-height = -3
+font-thicken = true
+adjust-cell-width = 0

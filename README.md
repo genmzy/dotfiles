@@ -1,0 +1,151 @@
+# After Ubuntu install
+
+<!--toc:start-->
+- [After Ubuntu install](#after-ubuntu-install)
+<!--toc:end-->
+
+- Net proxy
+
+``` bash
+mkdir ~/App
+cp -r ./Backup/FlClash ~/App/
+# run App/FlClash/FlClash-0.8.84-linux-amd64.AppImage
+# Add profile and chose node
+```
+
+- Apt sources
+
+``` plain
+# /etc/apt/sources.list.d/ubuntu.sources
+
+Types: deb
+URIs: http://mirrors.aliyun.com/ubuntu/
+Suites: noble noble-updates noble-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+Types: deb
+URIs: http://mirrors.aliyun.com/ubuntu/
+Suites: noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+
+sudo add-apt-repository ppa:apt-fast/stable
+sudo apt update && sudo apt-fast upgrade
+sudo apt-fast install bat ccat silversearcher-ag ripgrep lolcat \
+  htop ranger bear gcc make cmake curl tree neofetch git lua5.1 \
+  lua5.2 maven net-tools python3 pip
+```
+
+- Do copy
+
+``` bash
+cp -r ./.config/* ~/.config/
+cp -r ./.cargo ~/
+cp -r ./.gitconfig
+
+# cp -r ./.pip ~/.pip # ignore this since ubuntu24.04 use apt instead of pip
+
+mkdir ~/.local/share/fonts/ && \
+  cp -r ./Backup/LXGWWenKaiMono/* ./Backup/comicNFv3/* ~/.local/share/fonts/
+cp ./.zshrc ~/
+cp ./.npmrc ~/
+cp ./.pam_environment ~/
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# restart zsh
+```
+
+- Git configuration
+
+``` bash
+git config --global credential.helper store
+git config --global user.name "genmzy"
+git config --global user.email "986299679@qq.com"
+```
+
+- Set keyboard interval
+
+``` bash
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20 && \
+  gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+```
+
+- Input method
+
+``` plain
+# use fcitx5 as input method, and do not forget copy file **.pam_environment** above
+```
+
+- Gnome beautify
+
+``` bash
+sudo apt install ubuntu-desktop
+# mouse right-click and chose `Change Background` and set color to Blue
+
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme --depth=1
+cd WhiteSur-gtk-theme && ./install.sh -o solid -c light -l && \
+  sudo ./tweaks.sh -g -b "/usr/share/backgrounds/Monument_valley_by_orbitelambda.jpg"
+
+cd ../
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme --depth=1
+cd WhiteSur-icon-theme && ./install.sh -b
+
+```
+
+- Shortcut conflict
+  - Keyboard custom shortcut config change alt+space to ctrl+shift+space
+  - Fcitx5 trigger-input-method only keep control+space, not left-shift
+  - Fcitx5 change default-previous-page to `-` and default-next-page to `=`
+  - Fcitx5-addon - input-method - keyboard delete trigger-hint-mode and trigger-hint-mode-for-one-time
+
+- Problems
+  - First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again
+
+# Dank-Meterial-Shell Linux based on ubuntu
+
+- require `ubuntu >= 25.10`
+- install niri and dsm
+
+``` bash
+sudo add-apt-repository ppa:avengemedia/danklinux
+sudo add-apt-repository ppa:avengemedia/dms
+sudo apt update
+sudo apt install niri dms
+```
+
+- after install, use niri `wip/branch` branch build **niri** binary replacing with `/usr/bin/niri` for blur effect
+- should install `brightnessctl` and `wpctl` to control brightness and voice with keyboard, besides, should add user to group **video** like: `sudo usermod -aG video genmzy`
+- [wallpapers](https://github.com/genmzy/catppuccin-wallpapers)
+
+## problem fix
+
+- [x] touchboard problem: touch board will not work while run lots of time, no matter **niri** or **gnome**, should enable `security-boot` in bios
+
+## firefox fullwindow but not full-monitor
+
+- useful when want full-window video playing.
+- enter `about:config` on search bar.
+- set `full-screen-api.ignore-widgets` to `true`, now **F11** will works.
+
+## steam cannot display but a black screen
+
+- find snapd steam desktop file locaiton: `/var/lib/snapd/desktop/applications/steam_steam.desktop`
+- change `Exec` line and add paramter: `-system-composer`
+
+## firefox change all window zoom
+
+- `about:config` search `layout.css.devPixelsPerPx` change to `1.1` `1.3`.
+
+## Neovim new dependencies
+
+- find `tree-sitter-cli` from `treesitter` repository
+
+# GMS Greeter
+
+- copy `./.local/share/icons/breeze_cursors` to `/usr/share/icons/` instead of `~/.local/share/icons/`
+- `sudo apt install dms-greeter`
+- `dms greeter enable`
+- `dms greeter sync`

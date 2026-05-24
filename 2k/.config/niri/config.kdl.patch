@@ -1,0 +1,32 @@
+--- /home/waves/dotfiles/.config/niri/config.kdl	2026-05-01 20:34:57.942563637 +0800
++++ /home/waves/.config/niri/config.kdl	2026-05-01 20:42:47.527601886 +0800
+@@ -82,7 +82,7 @@
+ // Find more information on the wiki:
+ // https://niri-wm.github.io/niri/Configuration:-Outputs
+ // Remember to uncomment the node by removing "/-"!
+-output "eDP-1" {
++output "DP-1" {
+ 	// Uncomment this line to disable this output.
+ 	// off
+ 
+@@ -93,7 +93,7 @@
+ 	// If the mode is omitted altogether or is invalid, niri will pick one automatically.
+ 	// Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+ 	// mode "1920x1080@120.030"
+-	mode "1920x1080@60.001"
++	mode "2560x1440@180.000"
+ 
+ 	// You can use integer or fractional scale, for example use 1.5 for 150% scale.
+ 	scale 1.0
+@@ -114,6 +114,11 @@
+ 	position x=0 y=0
+ }
+ 
++// see: https://github.com/niri-wm/niri/wiki/FAQ#how-to-fix-lag-on-external-monitors-connected-to-a-hybrid-gpu-laptop
++debug {
++	render-drm-device "/dev/dri/renderD129"
++}
++
+ // Settings that influence how windows are positioned and sized.
+ // Find more information on the wiki:
+ // https://niri-wm.github.io/niri/Configuration:-Layout
