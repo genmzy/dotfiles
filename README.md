@@ -149,3 +149,9 @@ sudo apt install niri dms
 - `sudo apt install dms-greeter`
 - `dms greeter enable`
 - `dms greeter sync`
+
+# fingerprint
+
+- `install fprintd libpam-fprintd`
+- `fprintd-enroll $USER`
+- open dms and search `fingerprint` and enable that
