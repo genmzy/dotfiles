@@ -150,8 +150,16 @@ sudo apt install niri dms
 - `dms greeter enable`
 - `dms greeter sync`
 
-# fingerprint
+# Fingerprint
 
-- `install fprintd libpam-fprintd`
+- `sudo apt install fprintd libpam-fprintd`
 - `fprintd-enroll $USER`
 - open dms and search `fingerprint` and enable that
+
+# Battery Preserving
+
+- cli: `sudo apt install tlp tlp-rdw`
+- edit `/etc/tlp.conf` and edit with:
+  - set AC performance `CPU_ENERGY_PERF_POLICY_ON_AC=performance`
+  - set battery charge condition: `START_CHARGE_THRESH_BAT0=55` and `STOP_CHARGE_THRESH_BAT0=70`
+  - enable and restart tlp service: `sudo systemctl enable tlp.service && sudo systemctl start tlp.service`
