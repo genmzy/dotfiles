@@ -3,7 +3,7 @@
 #
 font-family = "0xProto"
 font-family = "Maple Mono NF CN"
-font-size = 14.6
+font-size = 16.8
 # font-feature = "ss01"
 adjust-cell-height = -3
 font-thicken = true

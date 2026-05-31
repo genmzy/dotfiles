@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Heroic
+Exec=env ALL_PROXY=socks5://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 /home/genmzy/App/heroic/Heroic-linux-x86_64.AppImage
+Icon=/home/genmzy/App/heroic/heroic.png
+Terminal=false
+Type=Application

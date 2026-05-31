@@ -126,9 +126,9 @@ export BAT_THEME="ansi-dark"
 if grep -qi microsoft /proc/version; then
   # wsl
   export PROXY_IP=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
-  export winhome=/mnt/c/Users/waves/
-  export windesk=/mnt/c/Users/waves/Desktop/
-  export windownload=/mnt/c/Users/waves/Downloads/
+  export winhome=/mnt/c/Users/genmzy/
+  export windesk=/mnt/c/Users/genmzy/Desktop/
+  export windownload=/mnt/c/Users/genmzy/Downloads/
   export winfonts=/mnt/d/font/
 else
   # export XMODIFIERS="@im=ibus"

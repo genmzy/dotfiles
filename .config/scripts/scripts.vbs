@@ -1,2 +1,2 @@
 set ws=WScript.CreateObject("WScript.Shell")
-ws.Run "C:\Users\waves\autoscripts\WslStatic.bat /start",0
+ws.Run "C:\Users\genmzy\autoscripts\WslStatic.bat /start",0

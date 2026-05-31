@@ -158,8 +158,28 @@ sudo apt install niri dms
 
 # Battery Preserving
 
+- close defualt battery manage: `systemctl stop upower` or `systemctl stop power-profiles-daemon`
 - cli: `sudo apt install tlp tlp-rdw`
 - edit `/etc/tlp.conf` and edit with:
   - set AC performance `CPU_ENERGY_PERF_POLICY_ON_AC=performance`
   - set battery charge condition: `START_CHARGE_THRESH_BAT0=55` and `STOP_CHARGE_THRESH_BAT0=70`
   - enable and restart tlp service: `sudo systemctl enable tlp.service && sudo systemctl start tlp.service`
+- **NOTE**: Lenovo laptop probably do not support change charge threshold but only enable or disable battery preserving in hardware, above settings will enable that, `sudo tlp-status -b` will check that
+
+# Nvidia Graphics card Settings
+
+- clean all installed nvidia driver`sudo apt purge "^nvidia-.*" "^libnvidia-.*"`
+- use ubuntu-drivers to install: `sudo ubuntu-drivers install`
+- check `nvidia-smi`
+- open **Nvidia X Server Settings** and set nvidia to performance while use AC
+- reboot system
+
+# Entertainment
+
+- steam: use `snap install steam` after graphics card settled
+- heroic:
+  - `sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0` to make heoric can start correctly
+  - make sure that *FlClash* and proxy started
+  - download heroic and change the name to `Heroic-linux-x86_64.AppImage`
+  - set *.desktop* startup, make sure the desktop file `Exec` set proxy variables (desktop file already in THIS repository)
+  - start heroic and download `GE-Proton-latest` on *Wine Manager*

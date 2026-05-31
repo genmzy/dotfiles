@@ -1,8 +1,8 @@
---- /home/waves/dotfiles/.config/fuzzel/fuzzel.ini	2026-04-30 22:27:59.314277310 +0800
+--- /home/genmzy/dotfiles/.config/fuzzel/fuzzel.ini	2026-04-30 22:27:59.314277310 +0800
 +++ ./fuzzel.ini	2026-05-01 10:44:49.813729192 +0800
 @@ -1,4 +1,4 @@
  include=~/.config/fuzzel/themes/catppuccin-mocha/lavender.ini
  
  [main]
--font=Geist Mono:weight=200:size=9
+-font=Geist Mono:weight=200:size=10
 +font=Geist Mono:weight=200:size=14
