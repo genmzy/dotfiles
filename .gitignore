@@ -17,6 +17,9 @@
 !/.config/fastfetch
 !/.config/clangd
 !/.config/fontconfig
+!/.config/zsh
+/.config/zsh/*
+!/.config/zsh/.zshrc
 .config/lazygit/state.yml
 !install.sh
 !.gitignore

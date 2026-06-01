@@ -8,6 +8,7 @@ environment {
 	GTK_IM_MODULE null
 	QT_IM_MODULE "fcitx"
 	XMODIFIERS "@im=fcitx"
+	ZDOTDIR "/home/genmzy/.config/zsh"
 }
 
 // Input device configuration.

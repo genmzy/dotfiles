@@ -1,5 +1,22 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+
+if grep -qi microsoft /proc/version; then
+  # wsl
+  export PROXY_IP=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+  export winhome=/mnt/c/Users/waves/
+  export windesk=/mnt/c/Users/waves/Desktop/
+  export windownload=/mnt/c/Users/waves/Downloads/
+  export winfonts=/mnt/d/font/
+else
+  # export XMODIFIERS="@im=ibus"
+  # export QT_IM_MODULE="ibus"
+  export PROXY_IP=127.0.0.1
+fi
+export https_proxy="http://$PROXY_IP:7890"
+export http_proxy="http://$PROXY_IP:7890"
+export ALL_PROXY="socks5://$PROXY_IP:7890"
+
+export ZSH=$HOME/.config/zsh/oh-my-zsh
 export NODE_PATH=/usr/local/lib/node_modules/
 #export GIT_SSL_NO_VERIFY=1
 
@@ -46,6 +63,8 @@ alias fslog="cd /usr/local/freeswitch/log"
 
 source $ZSH/oh-my-zsh.sh
 source /etc/zsh_command_not_found
+export HISTFILE=~/.config/zsh/.zsh_history
+export npm_config_cache=~/.config/node/npm
 
 # User configuration
 
@@ -54,19 +73,17 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # install zplug, plugin manager for zsh, https://github.com/zplug/zplug
 # curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 # zplug configruation
+export ZPLUG_HOME=~/.config/zsh/zplug
 if [[ ! -d "${ZPLUG_HOME}" ]]; then
-  if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    # If we can't get zplug, it'll be a very sobering shell experience. To at
-    # least complete the sourcing of this file, we'll define an always-false
-    # returning zplug function.
-    if [[ $? != 0 ]]; then
-      function zplug() {
-        return 1
-      }
-    fi
+  git clone https://github.com/zplug/zplug ~/.config/zsh/zplug
+  # If we can't get zplug, it'll be a very sobering shell experience. To at
+  # least complete the sourcing of this file, we'll define an always-false
+  # returning zplug function.
+  if [[ $? != 0 ]]; then
+	function zplug() {
+	  return 1
+	}
   fi
-  export ZPLUG_HOME=~/.zplug
 fi
 if [[ -d "${ZPLUG_HOME}" ]]; then
   source "${ZPLUG_HOME}/init.zsh"
@@ -95,11 +112,6 @@ zplug load
 # bindkey "cc" clear-screen
 bindkey '^o' autosuggest-accept
 
-export JAVA_HOME=/opt/environment/java/jdk-20.0.2
-export PATH=${JAVA_HOME}/bin:$PATH
-# export JRE_HOME=/${JAVA_HOME}
-# export CLASSPATH=.:${JAVA_HOME}/libss:${JRE_HOME}/lib
-
 #fzf
 export FZF_DEFAULT_OPTS='--bind ctrl-e:down,ctrl-u:up --tabstop=4 --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || hlight -O ansi -l {} || cat {}) 2> /dev/null | head -8000"'
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git/ -g !.github/'
@@ -123,22 +135,6 @@ export GOTRACEBACK=1
 #export BAT_THEME="Nord"
 export BAT_THEME="ansi-dark"
 
-if grep -qi microsoft /proc/version; then
-  # wsl
-  export PROXY_IP=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
-  export winhome=/mnt/c/Users/genmzy/
-  export windesk=/mnt/c/Users/genmzy/Desktop/
-  export windownload=/mnt/c/Users/genmzy/Downloads/
-  export winfonts=/mnt/d/font/
-else
-  # export XMODIFIERS="@im=ibus"
-  # export QT_IM_MODULE="ibus"
-  export PROXY_IP=127.0.0.1
-fi
-export https_proxy="http://$PROXY_IP:7890"
-export http_proxy="http://$PROXY_IP:7890"
-export ALL_PROXY="socks5://$PROXY_IP:7890"
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.config/emacs/bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -148,3 +144,10 @@ export VISUAL="nvim"
 export PATH=$PATH:/opt/environment/zig
 # autoload -U compinit; compinit
 export TERM='xterm-256color'
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+if [[ -d "${HOME}/.cargo" ]]; then
+  source "$HOME/.cargo/env"
+fi

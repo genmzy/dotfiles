@@ -108,3 +108,5 @@ custom-shader = ~/.config/ghostty/cursor_smear.glsl
 
 # --- single instance ---
 gtk-single-instance = true
+
+env = ZDOTDIR=/home/genmzy/.config/zsh
