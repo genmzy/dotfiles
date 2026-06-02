@@ -129,7 +129,13 @@ sudo apt install niri dms
 
 ## problem fix
 
-- [x] touchboard problem: touch board will not work while run lots of time, no matter **niri** or **gnome**, should enable `security-boot` in bios
+- [x] lazygit with the configuration in this repo failed when `<esc>` quit, should use earlier version lazygit instead:
+
+```
+go install github.com/jesseduffield/lazygit@v0.47.0
+```
+
+- [ ] rime <c-space> typing makes enter the first of listed, not letters
 
 ## firefox fullwindow but not full-monitor
 
