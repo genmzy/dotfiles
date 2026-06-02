@@ -66,18 +66,25 @@ git config --global user.name "genmzy"
 git config --global user.email "986299679@qq.com"
 ```
 
-- Set keyboard interval
+- Set keyboard interval for gtk
 
 ``` bash
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20 && \
   gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 ```
 
+- Niri/DMS do not need this
+
 - Input method
 
-``` plain
-# use fcitx5 as input method, and do not forget copy file **.pam_environment** above
-```
+- use fcitx5 as input method, and do not forget copy file **.pam_environment** above
+
+- Update: as use niri now, do not need `.pam_environment`
+- Use *rime* instead of *pinyin*:
+  - Need to install another packet: `sudo apt install fcitx5-rime`
+  - Use [frost](https://github.com/gaboolic/rime-frost) input:
+    - Download and unzip to frost: `mkdir rime && mv rime-frost-schemas.zip rime & cd rime && unzip ./rime-frost-schemas.zip`
+    - Move the directory to fcitx5: `rm -fr ~/.local/share/rime && mv ./rime ~/.local/share/fcitx5/`
 
 - Gnome beautify
 
@@ -158,7 +165,7 @@ sudo apt install niri dms
 
 # Battery Preserving
 
-- close defualt battery manage: `systemctl stop upower` or `systemctl stop power-profiles-daemon`
+- close default battery manage: `systemctl stop upower` or `systemctl stop power-profiles-daemon`
 - cli: `sudo apt install tlp tlp-rdw`
 - edit `/etc/tlp.conf` and edit with:
   - set AC performance `CPU_ENERGY_PERF_POLICY_ON_AC=performance`
