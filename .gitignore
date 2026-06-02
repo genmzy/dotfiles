@@ -20,6 +20,7 @@
 !/.config/zsh
 /.config/zsh/*
 !/.config/zsh/.zshrc
+!.config/starship
 .config/lazygit/state.yml
 !install.sh
 !.gitignore

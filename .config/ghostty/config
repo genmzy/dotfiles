@@ -97,7 +97,8 @@ clipboard-paste-protection = true
 clipboard-paste-bracketed-safe = true
 
 # --- Shell Integration ---
-shell-integration = detect
+shell-integration = none
+command = /bin/sh -c "env ZDOTDIR=$HOME/.config/zsh zsh"
 
 # --- Performance ---
 # Generous scrollback (25MB)
@@ -108,5 +109,3 @@ custom-shader = ~/.config/ghostty/cursor_smear.glsl
 
 # --- single instance ---
 gtk-single-instance = true
-
-env = ZDOTDIR=/home/genmzy/.config/zsh

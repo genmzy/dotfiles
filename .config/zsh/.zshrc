@@ -24,7 +24,7 @@ export NODE_PATH=/usr/local/lib/node_modules/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 # Example aliases
 alias remove="sudo apt-get remove"
@@ -46,7 +46,6 @@ alias l='ls -CF'
 alias mvSwap="~/.config/scripts/mvSwap.sh"
 alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
-alias gogo="cd ~/Workspace/golang/src/"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
 alias ff="fastfetch"
 
@@ -55,11 +54,6 @@ ff
 alias fs_memcheck="sudo valgrind --tool=memcheck --error-limit=no --log-file=vg.log --leak-check=full --leak-resolution=high --show-reachable=yes /usr/local/freeswitch/bin/freeswitch -vg -ncwait -nonat"
 alias fsconf="cd /usr/local/freeswitch/conf"
 alias fslog="cd /usr/local/freeswitch/log"
-
-
-## For gnome settings
-# alias caps_to_esc="/usr/bin/xmodmap -e 'clear lock' && /usr/bin/xmodmap -e 'keysym Caps_Lock = Escape'"
-# alias getFlexibleKey="gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30 && gsettings set org.gnome.desktop.peripherals.keyboard delay 250"
 
 source $ZSH/oh-my-zsh.sh
 source /etc/zsh_command_not_found
@@ -90,7 +84,6 @@ if [[ -d "${ZPLUG_HOME}" ]]; then
 fi
 
 zplug 'plugins/git', from:oh-my-zsh, if:'which git'
-zplug 'romkatv/powerlevel10k', use:powerlevel10k.zsh-theme
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions', defer:2
 zplug 'zsh-users/zsh-history-substring-search'
@@ -105,8 +98,6 @@ zplug load
 # source your own shrc file if exists
 [ -f ~/.env.sh ] && source ~/.env.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.config/p10k/p10k.zsh ]] && source ~/.config/p10k/p10k.zsh
 
 # NOTE: use cc to clear screen. I use tmux ctrl+hjkl switch panel, but ctrl+l conflict with clear-screen
 # bindkey "cc" clear-screen
@@ -147,6 +138,16 @@ export TERM='xterm-256color'
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+
+# Ghostty integration manually
+if [[ -n "$GHOSTTY_RESOURCES_DIR" && -z "$GHOSTTY_SHELL_INTEGRATION_LOADED" ]]; then
+    if [[ -f "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration" ]]; then
+        source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"
+        export GHOSTTY_SHELL_INTEGRATION_LOADED=1
+    fi
+fi
+
+source $HOME/.config/starship/starship.zsh
 
 if [[ -d "${HOME}/.cargo" ]]; then
   source "$HOME/.cargo/env"
