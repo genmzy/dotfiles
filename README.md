@@ -109,7 +109,7 @@ cd WhiteSur-icon-theme && ./install.sh -b
   - Fcitx5-addon - input-method - keyboard delete trigger-hint-mode and trigger-hint-mode-for-one-time
 
 - Problems
-  - First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again
+  - ~~First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again~~
 
 # Dank-Meterial-Shell Linux based on ubuntu
 
@@ -167,7 +167,11 @@ go install github.com/jesseduffield/lazygit@v0.47.0
 
 - `sudo apt install fprintd libpam-fprintd`
 - `fprintd-enroll $USER`
-- open dms and search `fingerprint` and enable that
+- lock screen: open dms and search `fingerprint` and enable that (need install dms-greeter and enable it like above)
+- login: edit `/etc/pam.d/greetd`(greetd is in used by dms-greeter) and add at the top of the file:
+```
+auth         sufficient      pam_fprintd.so
+```
 
 # Battery Preserving
 
