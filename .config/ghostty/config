@@ -97,8 +97,7 @@ clipboard-paste-protection = true
 clipboard-paste-bracketed-safe = true
 
 # --- Shell Integration ---
-shell-integration = none
-command = /bin/sh -c "env ZDOTDIR=$HOME/.config/zsh zsh"
+shell-integration = detect
 
 # --- Performance ---
 # Generous scrollback (25MB)

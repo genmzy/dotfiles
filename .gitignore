@@ -19,6 +19,7 @@
 !/.config/fontconfig
 !/.config/zsh
 /.config/zsh/*
+!/.config/environment.d/
 !/.config/zsh/.zshrc
 !.config/starship
 .config/lazygit/state.yml
