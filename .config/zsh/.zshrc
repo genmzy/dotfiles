@@ -142,14 +142,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-# Ghostty integration manually
-if [[ -n "$GHOSTTY_RESOURCES_DIR" && -z "$GHOSTTY_SHELL_INTEGRATION_LOADED" ]]; then
-    if [[ -f "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration" ]]; then
-        source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"
-        export GHOSTTY_SHELL_INTEGRATION_LOADED=1
-    fi
-fi
-
 if [[ -d "${HOME}/.cargo" ]]; then
   source "$HOME/.cargo/env"
 fi
