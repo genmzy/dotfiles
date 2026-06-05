@@ -8,6 +8,7 @@ environment {
 	GTK_IM_MODULE null
 	QT_IM_MODULE "fcitx"
 	XMODIFIERS "@im=fcitx"
+	QT_QPA_PLATFORMTHEME "qt5ct"
 }
 
 // Input device configuration.

@@ -156,6 +156,12 @@ go install github.com/jesseduffield/lazygit@v0.47.0
 
 - find `tree-sitter-cli` from `treesitter` repository
 
+# change the default qt-ui app font size like *okular*
+
+- `sudo apt install qt5ct qt6ct`
+- add `QT_QPA_PLATFORMTHEME "qt5ct"` to environment settings of niri configuration file(added in this repo)
+- open app `QT5 Settings` and change the font size
+
 # GMS Greeter
 
 - copy `./.local/share/icons/breeze_cursors` to `/usr/share/icons/` instead of `~/.local/share/icons/`
@@ -169,6 +175,7 @@ go install github.com/jesseduffield/lazygit@v0.47.0
 - `fprintd-enroll $USER`
 - lock screen: open dms and search `fingerprint` and enable that (need install dms-greeter and enable it like above)
 - login: edit `/etc/pam.d/greetd`(greetd is in used by dms-greeter) and add at the top of the file:
+
 ```
 auth         sufficient      pam_fprintd.so
 ```
