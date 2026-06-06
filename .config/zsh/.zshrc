@@ -138,9 +138,6 @@ export VISUAL="nvim"
 export PATH=$PATH:/opt/environment/zig
 # autoload -U compinit; compinit
 export TERM='xterm-256color'
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
 
 if [[ -d "${HOME}/.cargo" ]]; then
   source "$HOME/.cargo/env"
