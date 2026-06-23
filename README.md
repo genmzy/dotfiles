@@ -142,6 +142,7 @@ go install github.com/jesseduffield/lazygit@v0.47.0
 - useful when want full-window video playing.
 - enter `about:config` on search bar.
 - set `full-screen-api.ignore-widgets` to `true`, now **F11** will works.
+- if want to real-full screen like before, use `Mod+Shift+f` instead of `Mod+f`(maxmize) to make window full screen
 
 ## steam cannot display but a black screen
 
