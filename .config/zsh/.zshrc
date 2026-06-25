@@ -41,7 +41,7 @@ alias fsconf="cd /usr/local/freeswitch/conf"
 alias fslog="cd /usr/local/freeswitch/log"
 alias sfs_testing="sudo freeswitch -nc -nonat -conf /usr/local/freeswitch/conf.testing -log /usr/local/freeswitch/log -db /usr/local/freeswitch/db"
 alias sra="sudo ranger"
-alias ra="yazi"
+alias ra="QT_QPA_PLATFORMTHEME=qt5ct yazi"
 alias l='ls -CF'
 alias mvSwap="~/.config/scripts/mvSwap.sh"
 alias lg="lazygit"
