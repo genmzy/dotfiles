@@ -202,7 +202,7 @@
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
-  "browserPickerViewMode": "grid",
+  "browserPickerViewMode": "list",
   "browserUsageHistory": {
     "firefox_firefox": {
       "count": 2,

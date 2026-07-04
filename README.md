@@ -125,7 +125,7 @@ sudo apt install niri dms
 
 - after install, use niri `wip/branch` branch build **niri** binary replacing with `/usr/bin/niri` for blur effect
 - should install `brightnessctl` and `wpctl` to control brightness and voice with keyboard, besides, should add user to group **video** like: `sudo usermod -aG video genmzy`
-- [wallpapers](https://github.com/genmzy/catppuccin-wallpapers)
+- ~~[wallpapers](https://github.com/genmzy/catppuccin-wallpapers)~~ update: .config/wallpapers
 
 ## problem fix
 

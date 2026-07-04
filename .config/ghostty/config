@@ -62,7 +62,7 @@ keybind = alt+,=reload_config
 # --- Window and Appearance ---
 background-opacity = 1.0
 # background-blur-radius = 30
-background-image = ~/.config/ghostty/dark-cat.png
+background-image = ~/.config/wallpapers/catpuccin-girls.png
 background-image-opacity = 0.1
 background-image-fit = cover
 # macos-titlebar-style = transparent

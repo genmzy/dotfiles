@@ -17,6 +17,7 @@
 !/.config/fastfetch
 !/.config/clangd
 !/.config/fontconfig
+!/.config/wallpapers
 !/.config/zsh
 /.config/zsh/*
 !/.config/environment.d/
