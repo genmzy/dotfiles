@@ -181,7 +181,7 @@ go install github.com/jesseduffield/lazygit@v0.47.0
 auth         sufficient      pam_fprintd.so
 ```
 
-# Battery Preserving
+# Battery Preserving && Performance
 
 - close default battery manage: `systemctl stop upower` or `systemctl stop power-profiles-daemon`
 - cli: `sudo apt install tlp tlp-rdw`
@@ -189,7 +189,11 @@ auth         sufficient      pam_fprintd.so
   - set AC performance `CPU_ENERGY_PERF_POLICY_ON_AC=performance`
   - set battery charge condition: `START_CHARGE_THRESH_BAT0=55` and `STOP_CHARGE_THRESH_BAT0=70`
   - enable and restart tlp service: `sudo systemctl enable tlp.service && sudo systemctl start tlp.service`
-- **NOTE**: Lenovo laptop probably do not support change charge threshold but only enable or disable battery preserving in hardware, above settings will enable that, `sudo tlp-status -b` will check that
+- **NOTE**: Lenovo laptop probably do not support change charge threshold but only enable or disable battery preserving in hardware, settings above will enable that, `sudo tlp-status -b` will check that
+- CPU set to performance by changing the kernel paramters on grub:
+  - /etc/default/grub: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash cpufreq.default_governor=performance"`, most often, just add:
+    `cpufreq.default_governor=performance`
+  - Check that: `sudo tlp-stat -p`
 
 # Nvidia Graphics card Settings
 
