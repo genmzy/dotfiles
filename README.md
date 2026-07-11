@@ -204,6 +204,7 @@ auth         sufficient      pam_fprintd.so
 - open **Nvidia X Server Settings** and set nvidia to performance while use AC
 - reboot system
 - install `nvtop` to see gpu-memmory.
+- use GPU for specific app like game engine love, should set: `__NV_PRIME_RENDER_OFFLOAD=1` and `__GLX_VENDOR_LIBRARY_NAME=nvidia`
 
 # Entertainment
 
