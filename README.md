@@ -108,9 +108,6 @@ cd WhiteSur-icon-theme && ./install.sh -b
   - Fcitx5 change default-previous-page to `-` and default-next-page to `=`
   - Fcitx5-addon - input-method - keyboard delete trigger-hint-mode and trigger-hint-mode-for-one-time
 
-- Problems
-  - ~~First login gnome, everything is fine, while lock screen, some applications(like wezterm) cannot input Chinese(ctrl-space cannot switch fcitx5 input method): you should press super to workspace-overview and search anything in Chinese, will make fcitx5 work with those applications again~~
-
 # Dank-Meterial-Shell Linux based on ubuntu
 
 - require `ubuntu >= 25.10`
@@ -215,3 +212,11 @@ auth         sufficient      pam_fprintd.so
   - download heroic and change the name to `Heroic-linux-x86_64.AppImage`
   - set *.desktop* startup, make sure the desktop file `Exec` set proxy variables (desktop file already in THIS repository)
   - start heroic and download `GE-Proton-latest` on *Wine Manager*
+
+# System freeze
+
+- please use apt-steam instead of snap-steam, which will make system-wide freeze
+- for linux, NVMe PCIE disk should use schedule `none` instead of others
+  - check: cat `/sys/block/nvme0n1/queue/scheduler`
+  - instantly: `echo none | sudo tee /sys/block/nvme0n1/queue/scheduler` for linux.
+  - permanently: edit `/etc/udev/rules.d/60-nvme-scheduler.rules` with `ACTION=="add|change", KERNEL=="nvme0n1", ATTR{queue/scheduler}="none"`
