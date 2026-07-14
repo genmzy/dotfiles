@@ -189,8 +189,8 @@ auth         sufficient      pam_fprintd.so
     - unsupport: `STOP_CHARGE_THRESH_BAT0=1` (like thinkbook-16p, limittion: 75-80, `sudo tlp-status -b` will check that)
     - support: `START_CHARGE_THRESH_BAT0=55` and `STOP_CHARGE_THRESH_BAT0=70`
 - CPU set to performance by changing the kernel paramters on grub:
-  - /etc/default/grub: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash cpufreq.default_governor=performance"`, most often, just add:
-    `cpufreq.default_governor=performance`
+  - /etc/default/grub: add `cpufreq.default_governor=performance` to `GRUB_CMDLINE_LINUX_DEFAULT`
+  - do not forget `sudo update-grub` and reboot
   - check with: `sudo tlp-stat -p`
 
 # Nvidia Graphics card Settings
@@ -220,3 +220,7 @@ auth         sufficient      pam_fprintd.so
   - check: cat `/sys/block/nvme0n1/queue/scheduler`
   - instantly: `echo none | sudo tee /sys/block/nvme0n1/queue/scheduler` for linux.
   - permanently: edit `/etc/udev/rules.d/60-nvme-scheduler.rules` with `ACTION=="add|change", KERNEL=="nvme0n1", ATTR{queue/scheduler}="none"`
+- close APST for NVMe: edit `/etc/default/grub` add `nvme_core.default_ps_max_latency_us=0` to `GRUB_CMDLINE_LINUX_DEFAULT`
+  - do not forget `sudo update-grub` and reboot
+  - check with: `cat /sys/module/nvme_core/parameters/default_ps_max_latency_us`
+  - note: this will not affect disk service life
