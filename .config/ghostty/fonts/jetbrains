@@ -7,7 +7,7 @@ font-variation = "wght=400"
 font-variation-italic = "wght=400"
 font-variation-bold = "wght=600"
 font-variation-bold-italic = "wght=600"
-font-size = 16.7
+font-size = 16.4
 # cv03:g cv10:r cv11:y
 # font-feature = "cv10"
 adjust-cell-height = 1
