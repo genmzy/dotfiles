@@ -104,7 +104,7 @@
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
-  "systemTrayIconTintMode": "none",
+  "systemTrayIconTintMode": "monochrome",
   "systemTrayIconTintSaturation": 50,
   "systemTrayIconTintStrength": 135,
   "showClock": true,
@@ -274,13 +274,19 @@
   "browserPickerViewMode": "list",
   "browserUsageHistory": {
     "firefox_firefox": {
-      "count": 14,
-      "lastUsed": 1784188719825,
+      "count": 16,
+      "lastUsed": 1784384350883,
       "name": "Firefox"
     }
   },
   "appPickerViewMode": "grid",
-  "filePickerUsageHistory": {},
+  "filePickerUsageHistory": {
+    "firefox_firefox": {
+      "count": 1,
+      "lastUsed": 1784368289294,
+      "name": "Firefox"
+    }
+  },
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
@@ -613,8 +619,8 @@
       "spacing": 4,
       "innerPadding": 4,
       "bottomGap": 0,
-      "transparency": 0.35,
-      "widgetTransparency": 0.68,
+      "transparency": 0.3,
+      "widgetTransparency": 1,
       "squareCorners": false,
       "noBackground": false,
       "maximizeWidgetIcons": false,
@@ -624,16 +630,16 @@
       "gothCornersEnabled": false,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
-      "borderEnabled": false,
+      "borderEnabled": true,
       "borderColor": "surfaceText",
-      "borderOpacity": 1,
-      "borderThickness": 1,
+      "borderOpacity": 0.1,
+      "borderThickness": 2,
       "widgetOutlineEnabled": false,
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
       "fontScale": 1,
-      "iconScale": 1.3,
+      "iconScale": 1.25,
       "autoHide": false,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
@@ -646,10 +652,11 @@
       "scrollXBehavior": "column",
       "scrollYBehavior": "workspace",
       "shadowIntensity": 8,
-      "shadowOpacity": 70,
-      "shadowColorMode": "text",
+      "shadowOpacity": 60,
+      "shadowColorMode": "default",
       "shadowCustomColor": "#000000",
-      "clickThrough": false
+      "clickThrough": false,
+      "barInsetPadding": 4
     }
   ],
   "desktopClockEnabled": false,
