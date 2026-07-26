@@ -134,6 +134,17 @@ go install github.com/jesseduffield/lazygit@v0.47.0
 
 - [ ] rime <c-space> typing makes enter the first of listed, not letters
 
+## Change sudo's default behavior
+
+- add two lines using `sudo visudo`:
+
+```
+Defaults        !env_reset
+Defaults        !pwfeedbac
+```
+
+- ubuntu changed sudo to sudors, stupid feedback when typing password!
+
 ## firefox fullwindow but not full-monitor
 
 - useful when want full-window video playing.
