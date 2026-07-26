@@ -1,14 +1,12 @@
 # ============================================
 # Ghostty Terminal - Complete Configuration
 # ============================================
-# File: ~/.config/ghostty/config
 # View options: ghostty +show-config --default --docs
 
 # --- Typography ---
 config-file = fonts/geist
 
 # --- Theme and Colors ---
-# Catppuccin with automatic light/dark switching
 theme = Catppuccin Mocha
 
 # --- Keybindings ---
@@ -67,6 +65,7 @@ keybind = alt+,=reload_config
 # --- Window and Appearance ---
 background-opacity = 1.0
 # background-blur-radius = 30
+custom-shader = ~/.config/ghostty/cursor_smear.glsl
 background-image = ~/.config/wallpapers/catpuccin-girls.png
 background-image-opacity = 0.1
 background-image-fit = cover
@@ -107,11 +106,8 @@ clipboard-paste-bracketed-safe = true
 shell-integration = detect
 
 # --- Performance ---
-# Generous scrollback (25MB)
-scrollback-limit = 25000000
-
-# --- Beautify ---
-custom-shader = ~/.config/ghostty/cursor_smear.glsl
+# Generous scrollback (10MB)
+scrollback-limit = 10000000
 
 # --- single instance ---
 gtk-single-instance = true
