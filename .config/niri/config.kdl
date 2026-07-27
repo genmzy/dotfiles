@@ -360,7 +360,7 @@ workspace "term" {
 		border {
 			on
 			width 2
-			active-color "#f5c2e7"
+			active-color "#b4befe"
 		}
 	}
 }
