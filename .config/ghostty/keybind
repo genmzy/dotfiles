@@ -50,3 +50,6 @@ keybind = alt+space>f=toggle_split_zoom
 
 # Reload config
 keybind = alt+,=reload_config
+
+# vim mode
+config-file = vimode
