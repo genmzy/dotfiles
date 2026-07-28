@@ -1,0 +1,9 @@
+# ---
+# --- Theme and Colors ---
+# ---
+
+theme = Catppuccin Mocha
+
+# overwrite the selection color
+selection-background = #45475a
+selection-foreground = cell-foreground
