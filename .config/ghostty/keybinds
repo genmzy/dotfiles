@@ -27,8 +27,8 @@ keybind = alt+f=start_search
 keybind = alt+f11=toggle_fullscreen
 
 # Splits
-keybind = alt+ctrl+\=new_split:right
-keybind = alt+\=new_split:down
+keybind = alt+ctrl+enter=new_split:down
+keybind = alt+enter=new_split:right
 keybind = ctrl+alt+h=goto_split:left
 keybind = ctrl+alt+l=goto_split:right
 keybind = ctrl+alt+k=goto_split:top
