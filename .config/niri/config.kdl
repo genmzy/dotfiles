@@ -210,7 +210,7 @@ layout {
 		on
 
 		width 2
-		active-color "#74c7ec"
+		active-color "#f5c2e7"
 		inactive-color "#585b70"
 
 		// Color of the border around windows that request your attention.
@@ -370,7 +370,7 @@ workspace "game" {
 		gaps 6
 		border {
 			on
-			width 4
+			width 2
 			active-color "#a6e3a1"
 		}
 	}
