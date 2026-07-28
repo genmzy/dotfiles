@@ -6,6 +6,6 @@
 # includes
 config-file = fonts/geist
 config-file = theme
-config-file = keybind
+config-file = keybinds
 config-file = appearance
 config-file = behaviors
