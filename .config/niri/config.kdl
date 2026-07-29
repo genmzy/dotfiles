@@ -468,6 +468,14 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "+5%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "5%-"; }
 
+    // settings for external keyboard
+    Mod+Right allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; } // volume up
+    Mod+Left  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }        // volume down
+    Mod+Up    allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "+5%"; }             // bright up
+    Mod+Down  allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "5%-"; }             // bright down
+    Mod+9     allow-when-locked=true { spawn-sh "playerctl previous"; }
+    Mod+0     allow-when-locked=true { spawn-sh "playerctl next"; }
+
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.

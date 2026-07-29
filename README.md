@@ -117,11 +117,11 @@ cd WhiteSur-icon-theme && ./install.sh -b
 sudo add-apt-repository ppa:avengemedia/danklinux
 sudo add-apt-repository ppa:avengemedia/dms
 sudo apt update
-sudo apt install niri dms
+sudo apt install niri dms brightnessctl playerctl wpctl
 ```
 
 - after install, use niri `wip/branch` branch build **niri** binary replacing with `/usr/bin/niri` for blur effect
-- should install `brightnessctl` and `wpctl` to control brightness and voice with keyboard, besides, should add user to group **video** like: `sudo usermod -aG video genmzy`
+- should install `brightnessctl`, `wpctl` and `playerctl` to control brightness, voice and player with keyboard, besides, should add user to group **video** like: `sudo usermod -aG video genmzy`
 - ~~[wallpapers](https://github.com/genmzy/catppuccin-wallpapers)~~ update: .config/wallpapers
 
 ## problem fix
