@@ -35,7 +35,7 @@ sudo add-apt-repository ppa:apt-fast/stable
 sudo apt update && sudo apt-fast upgrade
 sudo apt-fast install bat ccat silversearcher-ag ripgrep lolcat \
   htop ranger bear gcc make cmake curl tree neofetch git lua5.1 \
-  lua5.2 maven net-tools python3 pip
+  lua5.2 maven net-tools python3 pip xclip
 ```
 
 - Do copy
@@ -102,7 +102,7 @@ cd WhiteSur-icon-theme && ./install.sh -b
 
 ```
 
-- Shortcut conflict
+- Shortcut conflict (update: this already added to fcitx5 configuration file)
   - Keyboard custom shortcut config change alt+space to ctrl+shift+space
   - Fcitx5 trigger-input-method only keep control+space, not left-shift
   - Fcitx5 change default-previous-page to `-` and default-next-page to `=`
