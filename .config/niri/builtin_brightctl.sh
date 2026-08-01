@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # Obtain the built-in screen backlight device (correct the connector name extraction)
 get_builtin_backlight() {
