@@ -450,31 +450,38 @@ binds {
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
     // "-l 1.0" limits the volume to 100%.
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    // for external keyboard
+    Mod+F1 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Mod+F2 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }        // volume down
+    Mod+F3 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; } // volume up
+    Mod+F4 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioStop allow-when-locked=true { spawn-sh "playerctl stop"; }
+    // for external keyboard
+    Mod+F9  allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    Mod+F10 allow-when-locked=true { spawn-sh "playerctl previous"; }
+    Mod+F11 allow-when-locked=true { spawn-sh "playerctl next"; }
+    Mod+F12 allow-when-locked=true { spawn-sh "playerctl stop"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
     XF86MonBrightnessUp allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "+5%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "5%-"; }
-
     // settings for external keyboard
-    Mod+Right allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; } // volume up
-    Mod+Left  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }        // volume down
-    Mod+Up    allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "+5%"; }             // bright up
-    Mod+Down  allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "5%-"; }             // bright down
-    Mod+9     allow-when-locked=true { spawn-sh "playerctl previous"; }
-    Mod+0     allow-when-locked=true { spawn-sh "playerctl next"; }
+    Mod+F5 allow-when-locked=true { spawn "dms" "ipc" "call" "night" "toggle"; }
+    Mod+F6 allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "5%-"; } // builtin screen brightness down
+    Mod+F7 allow-when-locked=true { spawn "~/.config/niri/builtin_brightctl.sh" "+5%"; } // builtin screen brightness up
+    Mod+F8 allow-when-locked=true { spawn "dms" "ipc" "call" "theme" "toggle"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -488,14 +495,14 @@ binds {
     Mod+K     { focus-window-or-workspace-up; }
     Mod+L     { focus-column-right; }
 
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    Mod+Left  { move-column-left; }
+    Mod+Right { move-column-right; }
+    Mod+Down  { move-column-to-workspace-down; }
+    Mod+Up    { move-column-to-workspace-up; }
+    Mod+Ctrl+H { move-column-left; }
+    Mod+Ctrl+L { move-column-right; }
+    Mod+Ctrl+J { move-column-to-workspace-down; }
+    Mod+Ctrl+K { move-column-to-workspace-up; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -535,23 +542,19 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
 
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    Mod+Page_Down      { move-window-down; }
+    Mod+Page_Up        { move-window-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
 
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
+    // Mod+Shift+Page_Down { move-workspace-down; }
+    // Mod+Shift+Page_Up   { move-workspace-up; }
+    // Mod+Shift+U         { move-workspace-down; }
+    // Mod+Shift+I         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -601,6 +604,7 @@ binds {
     Mod+6 { focus-workspace 6; }
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
     Mod+Ctrl+1 { move-column-to-workspace 1; }
     Mod+Ctrl+2 { move-column-to-workspace 2; }
     Mod+Ctrl+3 { move-column-to-workspace 3; }
@@ -609,6 +613,7 @@ binds {
     Mod+Ctrl+6 { move-column-to-workspace 6; }
     Mod+Ctrl+7 { move-column-to-workspace 7; }
     Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }

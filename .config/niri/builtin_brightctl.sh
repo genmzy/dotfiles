@@ -6,7 +6,7 @@ get_builtin_backlight() {
     for backlight_dev in /sys/class/backlight/*; do
         if [ -L "$backlight_dev" ]; then
             target=$(readlink -f "$backlight_dev")
-			# Extract the connector name, for example: card1-eDP-1
+            # Extract the connector name, for example: card1-eDP-1
             conn_name=$(echo "$target" | grep -oE "card[0-9]+-(eDP|LVDS)-[0-9]+")
             if [ -n "$conn_name" ]; then
                 status_file="/sys/class/drm/$conn_name/status"
@@ -19,7 +19,7 @@ get_builtin_backlight() {
         fi
     done
 
-	# Method 2: Heuristic Fallback (Prioritize graphics card driver devices)
+    # Method 2: Heuristic Fallback (Prioritize graphics card driver devices)
     mapfile -t devices < <(brightnessctl -l -c backlight | grep "Device" | awk -F"'" '{print $2}')
     for dev in "${devices[@]}"; do
         if [[ "$dev" =~ ^(intel_backlight|amdgpu_bl|nouveau_bl|i915) ]]; then
@@ -44,8 +44,8 @@ get_builtin_backlight() {
 
 DEVICE=$(get_builtin_backlight)
 if [ -z "$DEVICE" ]; then
-	echo "ERROR: Find no backlight devices" >&2
-	exit 1
+    echo "ERROR: Find no backlight devices" >&2
+    exit 1
 fi
 
 brightnessctl -d "$DEVICE" --class=backlight set "$1"
