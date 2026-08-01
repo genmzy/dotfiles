@@ -1,6 +1,7 @@
+quitOnTopLevelReturn: true # makes <esc> can quit
 keybinding:
   universal:
-    quit-alt1: '<esc>' # alternative/alias of quit
+    quit: "q"
 gui:
   border: rounded
   theme:
