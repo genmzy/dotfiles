@@ -1,0 +1,136 @@
+name = "Catppuccin-Mocha"
+description = "Catppuccin-Mocha theme"
+
+# ── Dark Variant ───────────────────────────────────────────
+[dark]
+primary = "#a6e3a1"
+secondary = "#45475a"
+accent = "#0000FF"
+success = "#00FF00"
+warning = "#FFFF00"
+error = "#FF0000"
+info = "#00FFFF"
+muted = "#45475a"
+hintKey = "#89b4fa"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+border = "#333333"
+surface = "#242424"
+
+[dark.highlights]
+menuTitle = "#f5c2e7"
+# 菜单项文字颜色
+menuItem = "#cdd6f4"
+# 选中项前景色
+selectedItem = "#a6e3a1"
+selectedItemBg = "#89b4fa"
+# 鼠标悬停颜色
+menuItemHover = "#b4befe"
+# 选中+悬停颜色
+selectedItemHover = "#b4befe"
+# 页面标题颜色
+# title = ""
+# 输入提示颜色
+# prompt = ""
+# 返回按钮颜色
+# backButton = ""
+# 返回按钮悬停颜色
+# backButtonHover = ""
+# 副标题颜色
+# subtitle = ""
+# 进度条空槽颜色
+# progressEmpty = ""
+# 滚动条轨道颜色
+# scrollTrack = ""
+# 滚动条滑块颜色
+# scrollThumb = ""
+# 按钮常态颜色
+# button = ""
+# 按钮失焦颜色
+# buttonBlurred = ""
+
+[dark.popup]
+surface = "#313244"
+border = "#313244"
+
+# ── 通知组件配色 ─────────────────────────────────────────
+[dark.notification]
+# 通知背景色
+surface = "#181825"
+# 信息通知边框色
+infoBorder = "#cdd6f4"
+# 成功通知边框色
+# successBorder = ""
+# 警告通知边框色
+# warningBorder = ""
+# 错误通知边框色
+# errorBorder = ""
+
+# ── 状态栏配色 ───────────────────────────────────────────
+[dark.statusBar]
+# 状态栏基底背景色
+bar = "#b4befe"
+# 状态栏文字颜色
+text = "#cdd6f4"
+# 面包屑路径颜色
+breadcrumb = "#cdd6f4"
+# 面包屑分隔符颜色 ">"
+breadcrumbSep = "#a6e3a1"
+# 面包屑悬停颜色
+breadcrumbHover = "#a6e3a1"
+# 面包屑点击颜色
+breadcrumbClick = "#a6e3a1"
+# 时间显示颜色
+time = "#cdd6f4"
+# 标签块文字颜色
+nugget = "#1e1e2e"
+# 面包屑角标前景色
+nuggetLabelFg = "#1e1e2e"
+nuggetLabel = "#a6e3a1"
+# 面包屑角标背景色
+nuggetLabelBg = "#a6e3a1"
+
+# ── Markdown 渲染主题 ────────────────────────────────────
+# 支持 glamour 内置主题名（dark/light/dracula/tokyo-night/notion/pink）
+# 或自定义 JSON 主题文件路径
+[dark.markdown]
+dark = "dark"
+
+[dark.app]
+# Lyric colors
+lyricActive = "#b4befe"
+lyricTransition = "#C9B1D4"
+lyricInactive = "#45475a"
+lyricHighlight = "#E8E8E8"
+
+# Playbar colors (ANSI terminal colors — adapt to terminal theme)
+playbarMode = "BrightMagenta"
+playbarVolume = "BrightBlue"
+playbarPlaying = "BrightYellow"
+playbarPaused = "Yellow"
+playbarHeartLiked = "Red"
+playbarHeartUnliked = "White"
+playbarArtist = "BrightBlack"
+
+# Visualizer colors: "random" or hex
+visualizerColorStart = "random"
+visualizerColorEnd = "random"
+
+# 整个应用背景色（默认透明不设置）
+# background = ""
+# 右键菜单背景色
+# contextMenuBg = ""
+# 右键菜单边框色
+# contextMenuBorder = ""
+# 频谱纵向渐变色
+# spectrumVerticalBg = ""
+# 桌面歌词背景色
+# desktopLyricsBg = ""
+# 登录/认证状态颜色
+# loginError = ""
+# loginSuccess = ""
+# authStatus = ""
+# CLI 配置表颜色
+# configTableBorder = ""
+# configTableSelectedFg = ""
+# configTableSelectedBg = ""
