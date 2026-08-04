@@ -10,7 +10,7 @@
       },
       "light": {
         "flavor": "latte",
-        "accent": "sapphire"
+        "accent": "rosewater"
       }
     },
     "everforest": "medium",
@@ -292,7 +292,9 @@
   "spotlightCloseNiriOverview": true,
   "rememberLastQuery": false,
   "rememberLastMode": true,
-  "spotlightSectionViewModes": {},
+  "spotlightSectionViewModes": {
+    "apps": "list"
+  },
   "appDrawerSectionViewModes": {
     "apps": "grid"
   },

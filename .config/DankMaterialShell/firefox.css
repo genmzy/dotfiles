@@ -1,15 +1,15 @@
 @media -moz-pref("userChrome.theme-material") {
   :root {
-    --md-sys-color-primary: #209fb5;
-    --md-sys-color-surface-tint: #209fb5;
+    --md-sys-color-primary: #dc8a78;
+    --md-sys-color-surface-tint: #dc8a78;
     --md-sys-color-on-primary: #eff1f5;
-    --md-sys-color-primary-container: #def3f8;
+    --md-sys-color-primary-container: #f6e7e3;
     --md-sys-color-on-primary-container: #4c4f69;
-    --md-sys-color-secondary: #1e66f5;
+    --md-sys-color-secondary: #dd7878;
     --md-sys-color-on-secondary: #eff1f5;
     --md-sys-color-secondary-container: #ccd0da;
     --md-sys-color-on-secondary-container: #4c4f69;
-    --md-sys-color-tertiary: #1e66f5;
+    --md-sys-color-tertiary: #dd7878;
     --md-sys-color-on-tertiary: #eff1f5;
     --md-sys-color-tertiary-container: #ccd0da;
     --md-sys-color-on-tertiary-container: #4c4f69;
@@ -30,17 +30,17 @@
     --md-sys-color-inverse-surface: #181825;
     --md-sys-color-inverse-on-surface: #cdd6f4;
     --md-sys-color-inverse-primary: #f5c2e7;
-    --md-sys-color-primary-fixed: #def3f8;
+    --md-sys-color-primary-fixed: #f6e7e3;
     --md-sys-color-on-primary-fixed: #eff1f5;
-    --md-sys-color-primary-fixed-dim: #209fb5;
+    --md-sys-color-primary-fixed-dim: #dc8a78;
     --md-sys-color-on-primary-fixed-variant: #eff1f5;
-    --md-sys-color-secondary-fixed: #1e66f5;
+    --md-sys-color-secondary-fixed: #dd7878;
     --md-sys-color-on-secondary-fixed: #eff1f5;
-    --md-sys-color-secondary-fixed-dim: #1e66f5;
+    --md-sys-color-secondary-fixed-dim: #dd7878;
     --md-sys-color-on-secondary-fixed-variant: #eff1f5;
-    --md-sys-color-tertiary-fixed: #1e66f5;
+    --md-sys-color-tertiary-fixed: #dd7878;
     --md-sys-color-on-tertiary-fixed: #eff1f5;
-    --md-sys-color-tertiary-fixed-dim: #1e66f5;
+    --md-sys-color-tertiary-fixed-dim: #dd7878;
     --md-sys-color-on-tertiary-fixed-variant: #eff1f5;
     --md-sys-color-surface-dim: #e6e9ef;
     --md-sys-color-surface-bright: #e6e9ef;
@@ -100,7 +100,7 @@
     --md-sys-color-scrim: #000000;
     --md-sys-color-inverse-surface: #e6e9ef;
     --md-sys-color-inverse-on-surface: #4c4f69;
-    --md-sys-color-inverse-primary: #209fb5;
+    --md-sys-color-inverse-primary: #dc8a78;
     --md-sys-color-primary-fixed: #7a3f69;
     --md-sys-color-on-primary-fixed: #1e1e2e;
     --md-sys-color-primary-fixed-dim: #f5c2e7;
