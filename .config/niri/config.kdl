@@ -10,6 +10,7 @@ environment {
     XMODIFIERS "@im=fcitx"
     QT_QPA_PLATFORMTHEME "qt5ct"
     LANG "zh_CN.UTF-8"
+    LANGUAGE "zh_CN.UTF-8"
 }
 
 // Input device configuration.
@@ -439,7 +440,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+S hotkey-overlay-title="DMS Settings" { spawn "dms" "ipc" "settings" "focusOrToggle"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -713,7 +714,8 @@ binds {
     Mod+P { spawn "dms" "ipc" "call" "color-picker" "toggle"; }
     Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Mod+N hotkey-overlay-title="Notepad: Toggle" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
-    Mod+D hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+S hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+I hotkey-overlay-title="DMS Settings" { spawn "dms" "ipc" "settings" "focusOrToggle"; }
     Mod+space hotkey-overlay-title="Bar: Toggle (Primary)" { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
 }
 
