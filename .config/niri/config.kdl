@@ -456,10 +456,10 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     // for external keyboard
-    Mod+F5 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    Mod+F6 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }        // volume down
-    Mod+F7 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; } // volume up
-    Mod+F8 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    Mod+F1 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Mod+F2 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }        // volume down
+    Mod+F3 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; } // volume up
+    Mod+F4 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
@@ -479,10 +479,10 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh +5%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh 5%-"; }
     // settings for external keyboard
-    Mod+F1 allow-when-locked=true { spawn "dms" "ipc" "call" "night" "toggle"; }
-    Mod+F2 allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh 5%-"; } // builtin screen brightness down
-    Mod+F3 allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh +5%"; } // builtin screen brightness up
-    Mod+F4 allow-when-locked=true { spawn "dms" "ipc" "call" "theme" "toggle"; }
+    Mod+F5 allow-when-locked=true { spawn "dms" "ipc" "call" "night" "toggle"; }
+    Mod+F6 allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh 5%-"; } // builtin screen brightness down
+    Mod+F7 allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh +5%"; } // builtin screen brightness up
+    Mod+F8 allow-when-locked=true { spawn "dms" "ipc" "call" "theme" "toggle"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
