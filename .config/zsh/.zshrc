@@ -48,6 +48,7 @@ alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
 alias ff="fastfetch"
+alias baresip="baresip -f ~/.config/baresip"
 
 ff
 
@@ -129,7 +130,7 @@ export GOTRACEBACK=1
 #export BAT_THEME="Nord"
 export BAT_THEME="ansi-dark"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
