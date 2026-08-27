@@ -40,10 +40,9 @@ alias fs="fs_cli"
 alias fsconf="cd /usr/local/freeswitch/conf"
 alias fslog="cd /usr/local/freeswitch/log"
 alias sfs_testing="sudo freeswitch -nc -nonat -conf /usr/local/freeswitch/conf.testing -log /usr/local/freeswitch/log -db /usr/local/freeswitch/db"
-alias sra="sudo ranger"
+alias sra="sudo QT_QPA_PLATFORMTHEME=qt5ct yazi"
 alias ra="QT_QPA_PLATFORMTHEME=qt5ct yazi"
 alias l='ls -CF'
-alias mvSwap="~/.config/scripts/mvSwap.sh"
 alias lg="lazygit"
 alias jpconfig="cd ~/.config/nvim/"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
@@ -127,19 +126,16 @@ export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn,direct
 export GOTRACEBACK=1
+
 #export BAT_THEME="Nord"
 export BAT_THEME="ansi-dark"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
+export PATH=$PATH:/opt/environment/zig
+export TERM='xterm-256color'
+
+export PATH="$HOME/.config/scripts:$PATH"
 
 /usr/bin/tabs 4
 
-export PATH=$PATH:/opt/environment/zig
-# autoload -U compinit; compinit
-export TERM='xterm-256color'
-
-if [[ -d "${HOME}/.cargo" ]]; then
-  source "$HOME/.cargo/env"
-fi
+# added by software

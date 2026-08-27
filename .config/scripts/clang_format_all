@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find . -name "*.cpp" -print0 | xargs -0 clang-format -i
+find . -name "*.cc" -print0 | xargs -0 clang-format -i
+find . -name "*.h" -print0 | xargs -0 clang-format -i
+find . -name "*.hh" -print0 | xargs -0 clang-format -i
+find . -name "*.c" -print0 | xargs -0 clang-format -i
