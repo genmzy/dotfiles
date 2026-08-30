@@ -19,9 +19,9 @@ gtk-wide-tabs = false
 # comment this will hidden tab tar
 window-show-tab-bar = never
 gtk-tabs-location = hidden
-adjust-underline-thickness = -80%
-adjust-strikethrough-thickness = -80%
-adjust-overline-thickness = -80%
+adjust-underline-thickness = -90%
+adjust-strikethrough-thickness = -90%
+adjust-overline-thickness = -90%
 # adjust-overline-thickness = +15%
 
 # cursor

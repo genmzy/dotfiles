@@ -3,11 +3,11 @@
 #
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
-font-variation = "wght=400"
-font-variation-italic = "wght=400"
-font-variation-bold = "wght=600"
-font-variation-bold-italic = "wght=600"
-font-size = 16.4
+font-variation = "wght=600"
+font-variation-italic = "wght=600"
+font-variation-bold = "wght=800"
+font-variation-bold-italic = "wght=800"
+font-size = 15.6
 # cv03:g cv10:r cv11:y
 # font-feature = "cv10"
 adjust-cell-height = 1

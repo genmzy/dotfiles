@@ -3,11 +3,11 @@
 #
 font-family = "Cascadia Code"
 font-family = "Maple Mono NF CN"
-font-variation = "wght=330"
-font-variation-italic = "wght=330"
+font-variation = "wght=370"
+font-variation-italic = "wght=370"
 font-variation-bold = "wght=500"
 font-variation-bold-italic = "wght=500"
-font-size = 16.8
+font-size = 16.2
 #font-feature = "cv02,cv05,cv08,cv10,cv11,calt,cv32,cv35"
 adjust-cell-height = 4
 font-thicken = true
