@@ -157,19 +157,9 @@ Defaults        !pwfeedbac
 - find snapd steam desktop file locaiton: `/var/lib/snapd/desktop/applications/steam_steam.desktop`
 - change `Exec` line and add paramter: `-system-composer`
 
-## firefox change all window zoom
-
-- `about:config` search `layout.css.devPixelsPerPx` change to `1.1` `1.3`.
-
 ## Neovim new dependencies
 
 - find `tree-sitter-cli` from `treesitter` repository
-
-# change the default qt-ui app font size like *okular*
-
-- `sudo apt install qt5ct qt6ct`
-- add `QT_QPA_PLATFORMTHEME "qt5ct"` to environment settings of niri configuration file(added in this repo)
-- open app `QT5 Settings` and change the font size
 
 # GMS Greeter
 
@@ -235,3 +225,25 @@ auth         sufficient      pam_fprintd.so
   - do not forget `sudo update-grub` and reboot
   - check with: `cat /sys/module/nvme_core/parameters/default_ps_max_latency_us`
   - note: this will not affect disk service life
+
+# Application scale
+
+- For font rendering for ghostty, we should keep the niri scale to 1.0, but some applications cannot show correctly
+
+## firefox
+
+- `about:config` search `layout.css.devPixelsPerPx` change to `1.1` `1.3`.
+
+## okular
+
+- `sudo apt install qt5ct qt6ct`
+- add `QT_QPA_PLATFORMTHEME "qt5ct"` to environment settings of niri configuration file(added in this repo)
+- open app `QT5 Settings` and change the font size
+
+## Aerion
+
+- change the .desktop file
+
+```
+Exec=env ALL_PROXY=socks5://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 WEBKIT_DISABLE_DMABUF_RENDERER=1 GDK_DPI_SCALE=1.25 /home/genmzy/App/aerion/aerion %U
+```
