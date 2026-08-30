@@ -105,6 +105,9 @@ zplug load
 # NOTE: use cc to clear screen. I use tmux ctrl+hjkl switch panel, but ctrl+l conflict with clear-screen
 # bindkey "cc" clear-screen
 bindkey '^o' autosuggest-accept
+bindkey '^[[44;5u' backward-word # <c-,>
+bindkey '^[[46;5u' forward-word # <c-.>
+
 
 #fzf
 export FZF_DEFAULT_OPTS='--bind ctrl-e:down,ctrl-u:up --tabstop=4 --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || hlight -O ansi -l {} || cat {}) 2> /dev/null | head -8000"'
