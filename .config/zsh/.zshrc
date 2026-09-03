@@ -137,7 +137,7 @@ export VISUAL="nvim"
 export PATH=$PATH:/opt/environment/zig
 export TERM='xterm-256color'
 
-export PATH="$HOME/.config/scripts:$PATH"
+export PATH="$HOME/.config/scripts:$HOME/.local/share/nvim/mason/bin:$PATH"
 
 /usr/bin/tabs 4
 
