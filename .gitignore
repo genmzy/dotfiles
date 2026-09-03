@@ -25,6 +25,7 @@
 !.config/starship
 !/.config/btop
 !/.config/go-musicfox
+!/.config/opencode
 .config/lazygit/state.yml
 !install.sh
 !.gitignore
