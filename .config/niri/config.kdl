@@ -469,8 +469,8 @@ binds {
     XF86AudioStop allow-when-locked=true { spawn-sh "playerctl stop"; }
     // for external keyboard
     Mod+F9  allow-when-locked=true { spawn-sh "bash ~/.config/niri/playerctl.sh play-pause"; }
-    Mod+F10 allow-when-locked=true { spawn-sh "playerctl previous && notify-send --app-name=\"playerctl\" \"Player Previous\""; }
-    Mod+F11 allow-when-locked=true { spawn-sh "playerctl next && notify-send --app-name=\"playerctl\" \"Player Next\""; }
+    Mod+F10 allow-when-locked=true { spawn-sh "playerctl previous"; }
+    Mod+F11 allow-when-locked=true { spawn-sh "playerctl next"; }
     Mod+F12 allow-when-locked=true { spawn-sh "playerctl stop && notify-send --app-name=\"playerctl\" \"Player Stop\""; }
 
     // Example brightness key mappings for brightnessctl.
