@@ -26,6 +26,7 @@
 !/.config/btop
 !/.config/go-musicfox
 !/.config/opencode
+!/.config/kitty
 .config/lazygit/state.yml
 !install.sh
 !.gitignore
