@@ -139,6 +139,9 @@ export TERM='xterm-256color'
 
 export PATH="$HOME/.config/scripts:$HOME/.local/share/nvim/mason/bin:$HOME/.local/kitty.app/bin:$PATH"
 
+unfunction d
+alias d="D_DETACH=^d d"
+alias di="D_DETACH=^d di"
 /usr/bin/tabs 4
 
 # added by software

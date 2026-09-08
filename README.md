@@ -226,6 +226,10 @@ auth         sufficient      pam_fprintd.so
   - check with: `cat /sys/module/nvme_core/parameters/default_ps_max_latency_us`
   - note: this will not affect disk service life
 
+# Tools
+
+[d/di](https://github.com/whoamihappyhacking/di) should install via `go build` and `./di install`
+
 # Application scale
 
 - For font rendering for ghostty, we should keep the niri scale to 1.0, but some applications cannot show correctly
