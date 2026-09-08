@@ -442,7 +442,7 @@
   "matugenTemplateVencord": true,
   "matugenTemplateEquibop": true,
   "matugenTemplateGhostty": false,
-  "matugenTemplateKitty": true,
+  "matugenTemplateKitty": false,
   "matugenTemplateFoot": true,
   "matugenTemplateAlacritty": true,
   "matugenTemplateNeovim": false,
@@ -541,7 +541,16 @@
   "notificationHistorySaveLow": true,
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
-  "notificationRules": [],
+  "notificationRules": [
+    {
+      "enabled": true,
+      "field": "desktopEntry",
+      "pattern": "snapd-desktop-integration_snapd-desktop-integration",
+      "matchType": "exact",
+      "action": "mute",
+      "urgency": "default"
+    }
+  ],
   "notificationFocusedMonitor": false,
   "osdAlwaysShowValue": false,
   "osdPosition": 5,
