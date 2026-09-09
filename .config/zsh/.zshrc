@@ -44,10 +44,10 @@ alias sra="sudo QT_QPA_PLATFORMTHEME=qt5ct yazi"
 alias ra="QT_QPA_PLATFORMTHEME=qt5ct yazi"
 alias l='ls -CF'
 alias lg="lazygit"
-alias jpconfig="cd ~/.config/nvim/"
+alias jpconfig="cd $HOME/.config/nvim/"
 alias bear="https_proxy=\"\" ALL_PROXY=\"\" bear"
 alias ff="fastfetch"
-alias baresip="baresip -f ~/.config/baresip"
+alias baresip="baresip -f $HOME/.config/baresip"
 
 ff
 
@@ -57,8 +57,8 @@ alias fslog="cd /usr/local/freeswitch/log"
 
 source $ZSH/oh-my-zsh.sh
 source /etc/zsh_command_not_found
-export HISTFILE=~/.config/zsh/.zsh_history
-export npm_config_cache=~/.config/node/npm
+export HISTFILE=$HOME/.config/zsh/.zsh_history
+export npm_config_cache=$HOME/.config/node/npm
 
 # User configuration
 
@@ -67,9 +67,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # install zplug, plugin manager for zsh, https://github.com/zplug/zplug
 # curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 # zplug configruation
-export ZPLUG_HOME=~/.config/zsh/zplug
+export ZPLUG_HOME=$HOME/.config/zsh/zplug
 if [[ ! -d "${ZPLUG_HOME}" ]]; then
-  git clone https://github.com/zplug/zplug ~/.config/zsh/zplug
+  git clone https://github.com/zplug/zplug $HOME/.config/zsh/zplug
   # If we can't get zplug, it'll be a very sobering shell experience. To at
   # least complete the sourcing of this file, we'll define an always-false
   # returning zplug function.
@@ -97,10 +97,10 @@ fi
 zplug load
 
 # source your own shrc file if exists
-[ -f ~/.env.sh ] && source ~/.env.sh
+[ -f $HOME/.env.sh ] && source $HOME/.env.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.config/p10k/p10k.zsh ]] && source ~/.config/p10k/p10k.zsh
+[[ -f $HOME/.config/p10k/p10k.zsh ]] && source $HOME/.config/p10k/p10k.zsh
 
 # NOTE: use cc to clear screen. I use tmux ctrl+hjkl switch panel, but ctrl+l conflict with clear-screen
 # bindkey "cc" clear-screen
@@ -115,8 +115,8 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git/ -g !.github/'
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_TMUX_HEIGHT='80%'
 export FZF_PREVIEW_COMMAND='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || cat {}) 2> /dev/null | head -8000'
-source ~/.config/fzf/key-bindings.zsh
-source ~/.config/fzf/completion.zsh
+source $HOME/.config/fzf/key-bindings.zsh
+source $HOME/.config/fzf/completion.zsh
 
 # github
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
