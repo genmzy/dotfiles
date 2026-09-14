@@ -474,6 +474,9 @@ binds {
     Mod+F11 allow-when-locked=true { spawn-sh "playerctl next"; }
     Mod+F12 allow-when-locked=true { spawn-sh "playerctl stop && notify-send --app-name=\"playerctl\" \"Player Stop\""; }
 
+    // Touchpad toggle
+    XF86TouchpadToggle allow-when-locked=true { spawn-sh "bash ~/.config/niri/touchpad_toggle.sh"; }
+
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
@@ -719,6 +722,10 @@ binds {
     Mod+I hotkey-overlay-title="DMS Settings" { spawn "dms" "ipc" "settings" "focusOrToggle"; }
     Mod+space hotkey-overlay-title="Bar: Toggle (Primary)" { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
 }
+
+// Optional, auto-generated toggle state (NOT tracked by git).
+// Absent = touchpad enabled (default). Presence = touchpad disabled.
+include optional=true "touchpad_state.kdl"
 
 include "dms/cursor.kdl"
 
