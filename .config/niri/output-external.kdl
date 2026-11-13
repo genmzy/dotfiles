@@ -1,0 +1,33 @@
+// Hybrid graphics (Intel iGPU + NVIDIA dGPU):
+// The external HDMI monitor is wired directly to the NVIDIA dGPU
+// (/dev/dri/renderD129), while the internal panel is on the Intel iGPU.
+// Rendering on the dGPU lets the external 4K@160Hz output be scanned out
+// natively, avoiding the stutter caused by rendering on the iGPU and then
+// copying the frame over to the dGPU.
+// disable-10bit-output: fixes a black screen on the internal panel when
+// rendering on the dGPU, caused by the cross-GPU copy failing to allocate a
+// 10-bit buffer (provided by niri-git; plain 26.04 does not have this option).
+// The internal panel will use an 8-bit CPU copy instead.
+// Note: after changing render-drm-device you must fully log out and back in
+// (restart niri) for it to take effect.
+debug {
+    render-drm-device "/dev/dri/renderD129"
+    disable-10bit-output
+    // Wait for each frame to finish rendering before handing it to DRM, which
+    // reduces jitter with NVIDIA multi-GPU. Commented out: it caps the internal
+    // panel's frame rate far below its 240Hz refresh.
+    // wait-for-frame-completion-before-queueing
+}
+
+// External monitor + dGPU configuration.
+// Included optionally from config.kdl; only takes effect when HDMI-A-1 is present.
+// Positioned before output "eDP-1" so HDMI-A-1 wins focus-at-startup priority
+// when both outputs are connected (external monitor is the main screen).
+output "HDMI-A-1" {
+    // 4K@160Hz (the monitor's maximum, driven directly by the NVIDIA dGPU).
+    mode "3840x2160@159.995"
+    scale 1.0
+    // External monitor on the left.
+    position x=0 y=0
+    focus-at-startup
+}

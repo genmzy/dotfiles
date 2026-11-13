@@ -13,26 +13,6 @@ environment {
     LANGUAGE "zh_CN.UTF-8"
 }
 
-// Hybrid graphics (Intel iGPU + NVIDIA dGPU):
-// The external HDMI monitor is wired directly to the NVIDIA dGPU
-// (/dev/dri/renderD129), while the internal panel is on the Intel iGPU.
-// Rendering on the dGPU lets the external 4K@160Hz output be scanned out
-// natively, avoiding the stutter caused by rendering on the iGPU and then
-// copying the frame over to the dGPU.
-// disable-10bit-output: fixes a black screen on the internal panel when
-// rendering on the dGPU, caused by the cross-GPU copy failing to allocate a
-// 10-bit buffer (provided by niri-git; plain 26.04 does not have this option).
-// The internal panel will use an 8-bit CPU copy instead.
-// Note: after changing render-drm-device you must fully log out and back in
-// (restart niri) for it to take effect.
-debug {
-    render-drm-device "/dev/dri/renderD129"
-    disable-10bit-output
-    // Wait for each frame to finish rendering before handing it to DRM, which
-    // reduces jitter with NVIDIA multi-GPU. Comment it out if it limits FPS.
-    wait-for-frame-completion-before-queueing
-}
-
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
@@ -110,16 +90,9 @@ input {
 
 // Preferred main output: focused at startup, so new windows and workspaces
 // (including the named "app"/"term"/"game" workspaces) are created here.
-// It is listed before eDP-1 because niri prioritizes focus-at-startup outputs
-// in config order when more than one is connected.
-output "HDMI-A-1" {
-    // 4K@160Hz (the monitor's maximum, driven directly by the NVIDIA dGPU).
-    mode "3840x2160@159.995"
-    scale 1.0
-    // External monitor on the left.
-    position x=0 y=0
-    focus-at-startup
-}
+// Included optionally before output "eDP-1" so HDMI-A-1 wins focus-at-startup
+// priority when both outputs are connected (external monitor is the main screen).
+include optional=true "output-external.kdl"
 
 output "eDP-1" {
     // Uncomment this line to disable this output.
@@ -133,6 +106,10 @@ output "eDP-1" {
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
     // mode "1920x1080@120.030"
     mode "2560x1600@240.000"
+
+    // Enable variable refresh rate (adaptive sync) so the panel can actually
+    // sustain its 240 Hz refresh without stuttering.
+    variable-refresh-rate
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1.0
