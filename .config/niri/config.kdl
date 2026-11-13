@@ -13,6 +13,26 @@ environment {
     LANGUAGE "zh_CN.UTF-8"
 }
 
+// Hybrid graphics (Intel iGPU + NVIDIA dGPU):
+// The external HDMI monitor is wired directly to the NVIDIA dGPU
+// (/dev/dri/renderD129), while the internal panel is on the Intel iGPU.
+// Rendering on the dGPU lets the external 4K@160Hz output be scanned out
+// natively, avoiding the stutter caused by rendering on the iGPU and then
+// copying the frame over to the dGPU.
+// disable-10bit-output: fixes a black screen on the internal panel when
+// rendering on the dGPU, caused by the cross-GPU copy failing to allocate a
+// 10-bit buffer (provided by niri-git; plain 26.04 does not have this option).
+// The internal panel will use an 8-bit CPU copy instead.
+// Note: after changing render-drm-device you must fully log out and back in
+// (restart niri) for it to take effect.
+debug {
+    render-drm-device "/dev/dri/renderD129"
+    disable-10bit-output
+    // Wait for each frame to finish rendering before handing it to DRM, which
+    // reduces jitter with NVIDIA multi-GPU. Comment it out if it limits FPS.
+    wait-for-frame-completion-before-queueing
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
@@ -87,6 +107,20 @@ input {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
+
+// Preferred main output: focused at startup, so new windows and workspaces
+// (including the named "app"/"term"/"game" workspaces) are created here.
+// It is listed before eDP-1 because niri prioritizes focus-at-startup outputs
+// in config order when more than one is connected.
+output "HDMI-A-1" {
+    // 4K@160Hz (the monitor's maximum, driven directly by the NVIDIA dGPU).
+    mode "3840x2160@159.995"
+    scale 1.0
+    // External monitor on the left.
+    position x=0 y=0
+    focus-at-startup
+}
+
 output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
@@ -116,7 +150,12 @@ output "eDP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=0
+    // Internal panel on the right of the external one (3840 logical pixels wide).
+    position x=3840 y=0
+
+    // Fallback main output when the external monitor is disconnected.
+    // It comes after HDMI-A-1, so it only wins when HDMI-A-1 is not connected.
+    focus-at-startup
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -285,6 +324,8 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-at-startup "fcitx5" "-d"
+// Switch kitty's font size when its window moves between outputs.
+spawn-at-startup "python3" "/home/genmzy/.config/niri/kitty_font_by_output.py"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
