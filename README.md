@@ -7,10 +7,7 @@
 - Net proxy
 
 ``` bash
-mkdir ~/App
-cp -r ./Backup/FlClash ~/App/
-# run App/FlClash/FlClash-0.8.84-linux-amd64.AppImage
-# Add profile and chose node
+sudo apt install ./Clash.Verge_2.5.10_amd64.deb
 ```
 
 - Apt sources
