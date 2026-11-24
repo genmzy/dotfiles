@@ -499,12 +499,14 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh +1%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh 1%-"; }
+    // Laptop's own brightness keys always control the built-in panel.
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "bash ~/.config/niri/brightctl.sh --builtin +1%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "bash ~/.config/niri/brightctl.sh --builtin 1%-"; }
     // settings for external keyboard
     Mod+F5 allow-when-locked=true { spawn "dms" "ipc" "call" "night" "toggle"; }
-    Mod+F6 allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh 1%-"; } // builtin screen brightness down
-    Mod+F7 allow-when-locked=true { spawn-sh "bash ~/.config/niri/builtin_brightctl.sh +1%"; } // builtin screen brightness up
+    // Prefer a DDC/CI external monitor if present, else the built-in panel.
+    Mod+F6 allow-when-locked=true { spawn-sh "bash ~/.config/niri/brightctl.sh --auto 1%-"; } // screen brightness down
+    Mod+F7 allow-when-locked=true { spawn-sh "bash ~/.config/niri/brightctl.sh --auto +1%"; } // screen brightness up
     Mod+F8 allow-when-locked=true { spawn "dms" "ipc" "call" "theme" "toggle"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
